@@ -5,30 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Members — KAISports</title>
 <meta name="description" content="Coordinators and members of KAISports — Korea AI Research Society for Sports." />
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+<link rel="alternate icon" href="assets/icons/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+<link rel="manifest" href="site.webmanifest" />
+<meta name="theme-color" content="#0b6e4f" />
 <link rel="stylesheet" href="css/style.css" />
-<style>
-  .member-card .avatar.initials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-weight: 700;
-    font-size: 36px;
-    letter-spacing: 1px;
-    background: linear-gradient(135deg, #0e8a63 0%, #1aa67c 100%);
-    border-color: var(--accent-soft);
-  }
-</style>
 </head>
 <body>
 
 <header class="site-header">
   <div class="nav">
     <a class="brand" href="index.html">
-      <span class="logo">KS</span>
+      <span class="logo"><img src="assets/icons/logo-mark.svg" alt="KAISports logo" /></span>
       <span>KAISports</span>
     </a>
-    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <button type="button" class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="publications.html">Publications</a></li>
@@ -52,7 +44,7 @@
   <div class="members-grid">
 
     <div class="member-card">
-      <div class="avatar initials">SK</div>
+      <div class="avatar" data-photo="assets/members/sang-ki-ko.jpg" aria-label="Sang-Ki Ko"></div>
       <h3>Sang-Ki Ko</h3>
       <p class="role">
         <span>Assistant Professor, University of Seoul</span>
@@ -61,7 +53,7 @@
     </div>
 
     <div class="member-card">
-      <div class="avatar initials">HK</div>
+      <div class="avatar" data-photo="assets/members/hyunsung-kim.jpg" aria-label="Hyunsung Kim"></div>
       <h3>Hyunsung Kim</h3>
       <p class="role">
         <span>Ph.D. Student, KAIST</span>
@@ -70,7 +62,7 @@
     </div>
 
     <div class="member-card">
-      <div class="avatar initials">ML</div>
+      <div class="avatar" data-photo="assets/members/minho-lee.jpg" aria-label="Minho Lee"></div>
       <h3>Minho Lee</h3>
       <p class="role">
         <span>Ph.D. Candidate, Saarland University</span>
@@ -83,7 +75,7 @@
   <div class="members-grid">
 
     <div class="member-card">
-      <div class="avatar initials">JL</div>
+      <div class="avatar" data-photo="assets/members/jaemin-lee.jpg" aria-label="Jaemin Lee"></div>
       <h3>Jaemin Lee</h3>
       <p class="role">
         <span>SW Engineer, Samsung Electronics</span>
@@ -91,7 +83,7 @@
     </div>
 
     <div class="member-card">
-      <div class="avatar initials">GJ</div>
+      <div class="avatar" data-photo="assets/members/geonhee-jo.jpg" aria-label="Geonhee Jo"></div>
       <h3>Geonhee Jo</h3>
       <p class="role">
         <span>M.S. Student, University of Seoul</span>
@@ -99,7 +91,7 @@
     </div>
 
     <div class="member-card">
-      <div class="avatar initials">MH</div>
+      <div class="avatar" data-photo="assets/members/miru-hong.jpg" aria-label="Miru Hong"></div>
       <h3>Miru Hong</h3>
       <p class="role">
         <span>M.S. Student, University of Seoul</span>
@@ -107,7 +99,7 @@
     </div>
 
     <div class="member-card">
-      <div class="avatar initials">JS</div>
+      <div class="avatar" data-photo="assets/members/jae-hee-so.jpg" aria-label="Jae-hee So"></div>
       <h3>Jae-hee So</h3>
       <p class="role">
         <span>Junior Economist, Bank of Korea</span>
@@ -117,9 +109,15 @@
   </div>
 
   <h2 class="group-heading">Corporate Partners</h2>
-  <div class="partners">
-    <span class="partner-badge">Fitogether Inc.</span>
-    <span class="partner-badge">University of Seoul</span>
+  <div class="partner-logos">
+    <div class="partner">
+      <img src="assets/partners/fitogether.png" alt="Fitogether Inc." loading="lazy" />
+      <span>Fitogether Inc.</span>
+    </div>
+    <div class="partner">
+      <img src="assets/partners/university-of-seoul.png" alt="University of Seoul" loading="lazy" />
+      <span>University of Seoul</span>
+    </div>
   </div>
 
 </main>
@@ -129,6 +127,11 @@
   <p>&copy; <span id="year"></span> KAISports — Korea AI Research Society for Sports</p>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.querySelectorAll('.member-card .avatar[data-photo]').forEach(el => {
+  el.style.backgroundImage = `url('${el.dataset.photo}')`;
+});
+</script>
 </body>
 </html>
