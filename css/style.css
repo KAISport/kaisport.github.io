@@ -546,7 +546,7 @@ img { max-width: 100%; display: block; }
 .article-header h1 {
   font-size: 36px;
   line-height: 1.2;
-  letter-spacing: -0.4px;
+  letter-spacing: 0;
   margin: 0 0 10px;
 }
 .article-header .deck {
@@ -562,7 +562,7 @@ img { max-width: 100%; display: block; }
 .article-body h2 {
   font-size: 22px;
   margin: 36px 0 12px;
-  letter-spacing: -0.2px;
+  letter-spacing: 0;
 }
 .article-body h3 {
   font-size: 18px;
@@ -587,6 +587,75 @@ img { max-width: 100%; display: block; }
   margin: 32px 0;
 }
 .article-body a { color: var(--accent-dark); text-decoration: underline; }
+.article-body figure {
+  margin: 30px 0;
+}
+.article-body figure.wide {
+  position: relative;
+  left: 50%;
+  width: min(1100px, calc(100vw - 40px));
+  transform: translateX(-50%);
+}
+.article-body figure img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+.article-body figcaption {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+}
+.article-table {
+  width: 100%;
+  margin: 24px 0;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+.article-body table {
+  width: 100%;
+  min-width: 690px;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.article-body th,
+.article-body td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: right;
+  white-space: nowrap;
+}
+.article-body th {
+  color: var(--text);
+  background: var(--bg-alt);
+  font-weight: 700;
+}
+.article-body th:nth-child(-n+2),
+.article-body td:nth-child(-n+2) {
+  text-align: left;
+}
+.article-body tbody tr:last-child td { border-bottom: 0; }
+.article-body tbody tr.highlight td {
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+.article-note {
+  margin: 20px 0 !important;
+  padding: 14px 16px;
+  border-left: 3px solid var(--accent);
+  background: var(--bg-alt);
+  color: var(--muted);
+  font-size: 14px;
+}
 .article-footer {
   margin-top: 40px;
   padding-top: 24px;
@@ -600,3 +669,13 @@ img { max-width: 100%; display: block; }
   font-size: 14.5px;
 }
 .article-footer a { font-weight: 600; }
+
+@media (max-width: 600px) {
+  .article { padding: 38px 16px 64px; }
+  .article-header h1 { font-size: 29px; }
+  .article-header .deck { font-size: 16.5px; }
+  .article-body { font-size: 16px; }
+  .article-body figure.wide { width: calc(100vw - 24px); }
+  .article-body th,
+  .article-body td { padding: 9px 10px; }
+}
