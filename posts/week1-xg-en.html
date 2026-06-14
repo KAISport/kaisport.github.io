@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What the Table Doesn't Tell You: Reassessing FC Seoul's 2025 Through xG | KAISports</title>
+<meta name="description" content="A reassessment of the 2025 K League 1 season and FC Seoul through xG, xPoints, and rolling xGD." />
+<link rel="alternate" hreflang="ko" href="https://kaisport.github.io/posts/week1-xg.html" />
+<link rel="alternate" hreflang="en" href="https://kaisport.github.io/posts/week1-xg-en.html" />
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+<link rel="alternate icon" href="../assets/icons/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png" />
+<link rel="manifest" href="../site.webmanifest" />
+<meta name="theme-color" content="#0b6e4f" />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo"><img src="../assets/icons/kaisports-mark.svg" alt="KAISports logo" /></span>
+      <span>KAISports</span>
+    </a>
+    <button type="button" class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a class="active" href="../insights-en.html">Insights</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="../presentations.html">Presentations</a></li>
+      <li><a href="../gatherings.html">Gatherings</a></li>
+      <li><a href="../members.html">Members</a></li>
+    </ul>
+  </div>
+</header>
+
+<article class="article article-report">
+
+  <header class="article-header">
+    <nav class="language-switch" aria-label="Language">
+      <a href="week1-xg.html" lang="ko">한국어</a>
+      <a class="active" href="week1-xg-en.html" lang="en" aria-current="page">English</a>
+    </nav>
+    <div class="meta">
+      <span class="tag">K League Analysis</span>
+      <span>June 13, 2026</span>
+      <span>· 15 min read</span>
+      <span>· KAISports Team</span>
+    </div>
+    <h1>What the Table Doesn't Tell You: Reassessing FC Seoul's 2025 Through xG</h1>
+  </header>
+
+  <div class="article-body">
+
+    <p>In 2024, FC Seoul appointed Kim Gi-dong as head coach.</p>
+
+    <p>Expectations were high. At Pohang, Kim had built a well-structured team despite limited resources, and Seoul wanted that same kind of stability.</p>
+
+    <p>The first season went reasonably well. Seoul reached Final A in 2024 and finished fourth with 58 points. The league table told a simple story: a good coach had arrived, and Seoul had improved.</p>
+
+    <p>But the course of the 2025 season made that judgment more difficult. It was the second year under the same coach and the same direction, yet the results did not meet expectations.</p>
+
+    <p>That changes the question.</p>
+
+    <blockquote>
+      Was Seoul really improving? Was the strong 2024 finish supported by the underlying performance? Did the turbulence of 2025 truly reflect a decline in performance?
+    </blockquote>
+
+    <p>To answer these questions, this article uses expected goals, or xG.</p>
+
+    <p>xG assigns a probability to a shot becoming a goal. Goals show the outcome; xG describes the quality of the chances created before that outcome.</p>
+
+    <p>Here, xG is not treated as a final answer. It is a tool for breaking Seoul's attack into clearer questions: Were they creating good chances? Did those chances become goals? And how did Kim Gi-dong's attacking structure change between 2024 and 2025?</p>
+
+    <h2>What Is xG?</h2>
+
+    <p>xG is a measure of shot quality.</p>
+
+    <p>Every attempt is recorded as one shot, but not every shot has the same chance of becoming a goal. A shot from directly in front of goal is fundamentally different from a long-range attempt outside the penalty area.</p>
+
+    <p>xG expresses that difference numerically.</p>
+
+    <p>For example, a shot with an xG value of 0.10 is scored about once in every ten similar situations. An xG value of 0.50 represents a high-quality chance that is converted about half the time.</p>
+
+    <figure>
+      <img src="../assets/insights/k-league-xg-seoul/00_probability_by_shot_location.png" alt="Expected-goal probability by shot location" loading="lazy" />
+      <figcaption>Figure 1. The probability of scoring increases closer to goal and from wider shooting angles.</figcaption>
+    </figure>
+
+    <p>How are these probabilities calculated?</p>
+
+    <p>xG models are trained on large collections of historical shots. They learn whether each shot became a goal and the circumstances in which it was taken. When a new shot is observed, the model estimates its scoring probability from how often similar attempts were converted in the past.</p>
+
+    <p>Common inputs include:</p>
+
+    <ul>
+      <li>Shot location</li>
+      <li>Distance from goal</li>
+      <li>Shooting angle</li>
+      <li>Body part used</li>
+      <li>Type of preceding pass</li>
+      <li>Open-play or set-piece context</li>
+      <li>Defensive pressure</li>
+    </ul>
+
+    <p>Even two shots from inside the penalty area can receive different xG values. A central attempt taken with time and space is different from a shot under pressure from a narrow angle.</p>
+
+    <p>A team's match xG is the sum of the xG values of all its shots. A high xG total therefore means more than simply taking many shots; it generally indicates the creation of more high-probability chances.</p>
+
+    <p>xG does not explain everything. Elite finishers can score from low-xG chances, and elite goalkeepers can prevent goals from high-xG situations. Different xG models also produce different estimates.</p>
+
+    <p>Still, xG is a useful starting point for evaluating attack. Goals show the result, while xG shows the opportunities a team created before the result.</p>
+
+    <h2>Revisiting the 2025 K League 1 Table Through xG</h2>
+
+    <p>Before focusing on Seoul, let us reconsider the league as a whole through xG.</p>
+
+    <p>The table shows the points each team earned. xG shows how well teams created good chances and prevented their opponents from doing the same. Looking at both helps us assess whether the standings and the underlying performance point in the same direction.</p>
+
+    <p>Three metrics are central here:</p>
+
+    <ul>
+      <li><strong>xG</strong>: the total expected value of a team's shots</li>
+      <li><strong>xGA</strong>: the expected value of the shots a team conceded</li>
+      <li><strong>xGD</strong>: xG minus xGA, combining chance creation and chance prevention</li>
+    </ul>
+
+    <p>A high xGD does not simply mean that a team attacked well. It means that the team created good chances while limiting the quality of its opponents' chances. That makes xGD a useful first measure of overall performance.</p>
+
+    <p>League positions, however, are determined by points rather than goal difference. We therefore also use xPoints. Based on each match's xG, xPoints estimates how many points a team could expect from that level of performance.</p>
+
+    <p>In short, xGD describes the direction of performance, while xPoints translates that performance into expected league points.</p>
+
+    <div class="article-table" role="region" aria-label="2025 K League 1 standings and expected-goal metrics" tabindex="0">
+      <table>
+        <thead>
+          <tr>
+            <th>Actual rank</th>
+            <th>Team</th>
+            <th>Points</th>
+            <th>xPoints</th>
+            <th>Overall xPoints rank</th>
+            <th>xGD/match</th>
+            <th>Overall xGD rank</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Jeonbuk</td><td>79</td><td>61.4</td><td>2</td><td>+0.402</td><td>2</td></tr>
+          <tr><td>2</td><td>Daejeon</td><td>65</td><td>50.7</td><td>6</td><td>-0.076</td><td>6</td></tr>
+          <tr><td>3</td><td>Gimcheon</td><td>61</td><td>56.5</td><td>4</td><td>+0.183</td><td>4</td></tr>
+          <tr><td>4</td><td>Pohang</td><td>56</td><td>54.9</td><td>5</td><td>+0.094</td><td>5</td></tr>
+          <tr><td>5</td><td>Gangwon</td><td>52</td><td>47.2</td><td>10</td><td>-0.205</td><td>10</td></tr>
+          <tr class="highlight"><td>6</td><td>FC Seoul</td><td>49</td><td>62.5</td><td>1</td><td>+0.424</td><td>1</td></tr>
+          <tr><td>7</td><td>Gwangju</td><td>54</td><td>47.7</td><td>9</td><td>-0.138</td><td>8</td></tr>
+          <tr><td>8</td><td>FC Anyang</td><td>49</td><td>48.1</td><td>8</td><td>-0.157</td><td>9</td></tr>
+          <tr><td>9</td><td>Ulsan</td><td>44</td><td>58.3</td><td>3</td><td>+0.209</td><td>3</td></tr>
+          <tr><td>10</td><td>Suwon FC</td><td>42</td><td>48.3</td><td>7</td><td>-0.115</td><td>7</td></tr>
+          <tr><td>11</td><td>Jeju</td><td>39</td><td>46.9</td><td>11</td><td>-0.285</td><td>11</td></tr>
+          <tr><td>12</td><td>Daegu</td><td>34</td><td>43.9</td><td>12</td><td>-0.336</td><td>12</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-xg-seoul/01_2025_xgd_per_match_ranking.png" alt="2025 K League 1 teams ranked by xGD per match" loading="lazy" />
+      <figcaption>Figure 2. Team xGD per match in the 2025 K League 1. FC Seoul recorded the highest value.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../assets/insights/k-league-xg-seoul/02_2025_actual_ppm_vs_xpts_ppm.png" alt="Actual points per match compared with expected points per match in the 2025 K League 1" loading="lazy" />
+      <figcaption>Figure 3. Teams below the diagonal earned fewer actual points than their xPoints suggested.</figcaption>
+    </figure>
+
+    <p>FC Seoul is the first team that stands out.</p>
+
+    <p>Seoul finished sixth, but ranked first in both overall xPoints and xGD. The table presents a mid-table side, while xG describes a team that created and prevented chances at the best level in the league.</p>
+
+    <p>Seoul also sits well below the diagonal in the second chart. The team earned 49 points, about 13.5 fewer than the model's estimate of 62.5. In other words, strong underlying performance did not translate fully into results.</p>
+
+    <p>Jeonbuk, by contrast, finished first and ranked second in both overall xPoints and xGD. Their performance was worthy of a title contender, but their actual total was still about 17.6 points above expectation.</p>
+
+    <p>Daejeon finished second but ranked sixth in both overall xPoints and xGD, making them a clear example of results outperforming the underlying numbers. Gimcheon finished third and ranked fourth in both metrics, so their table position and performance indicators were relatively well aligned.</p>
+
+    <p>Seoul's 2025 season is therefore difficult to describe simply as a season of poor performance. It was closer to a season in which league-leading underlying numbers failed to become points and position.</p>
+
+    <h2>Where Did Seoul's xG Come From?</h2>
+
+    <p>As we have seen, xG rated Seoul more highly than the final league table did.</p>
+
+    <p>The next question is where that difference came from. Did Seoul lose value in attack, or did they concede more than the quality of their defensive chances suggested?</p>
+
+    <p>We begin by comparing goals with xG, and goals conceded with xGA.</p>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-xg-seoul/03_seoul_goals_xg_and_ga_xga.png" alt="FC Seoul goals and xG, and goals conceded and xGA, by season" loading="lazy" />
+      <figcaption>Figure 4. FC Seoul's actual and expected goals for and against by season.</figcaption>
+    </figure>
+
+    <p>In 2024, Seoul scored about six more goals than their xG total suggested.</p>
+
+    <p>In 2025, they scored 50 goals from approximately 54.5 xG. That was about 4.5 goals below expectation. Their finishing did not collapse, but it would also be inaccurate to say that they converted the full value of their chances.</p>
+
+    <p>The larger difference appeared in defense.</p>
+
+    <p>Seoul's xGA fell to about 38.4 in 2025, lower than in 2024, yet their actual goals conceded rose from 42 to 52. They allowed approximately 13.6 more goals than the expected value of the chances they faced.</p>
+
+    <p>Seoul were not primarily a team that repeatedly conceded high-quality chances. They were a team that conceded far more goals than their xGA suggested. There was also a shortfall in attack, but the larger gap behind the disappointing results came at the defensive end.</p>
+
+    <p>How, then, did the structure of Seoul's shooting change?</p>
+
+    <figure>
+      <img src="../assets/insights/k-league-xg-seoul/04_seoul_shot_volume_vs_quality.png" alt="FC Seoul shot volume and xG per shot by season" loading="lazy" />
+      <figcaption>Figure 5. Seoul's shot volume increased while average shot quality declined.</figcaption>
+    </figure>
+
+    <p>Seoul took substantially more shots in 2025, but their xG per shot fell.</p>
+
+    <p>They shot more often, but not from better locations. The volume of attack increased while the average threat of each attempt declined.</p>
+
+    <p>Seoul's attack did not completely break down in 2025. Total xG increased, but goals fell below expectation and shot quality declined. At the other end, the team conceded far more than its xGA. That helps explain why an elite xG profile did not produce an elite league position.</p>
+
+    <h2>Rolling xGD: When Did Seoul Begin to Change?</h2>
+
+    <p>Season totals show averages, but changes in team performance can be hidden inside those averages.</p>
+
+    <p>To examine the match-by-match trend, we use five-match rolling xGD, the average xG difference over a team's most recent five matches.</p>
+
+    <p>A value above zero means that Seoul produced the stronger xG balance over those matches. A value below zero means their opponents produced the better chance profile.</p>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-xg-seoul/05_seoul_rolling_5_match_xgd.png" alt="FC Seoul five-match rolling xGD in 2024 and 2025" loading="lazy" />
+      <figcaption>Figure 6. The dashed line marks the transition from the 33-match regular season to the final round.</figcaption>
+    </figure>
+
+    <p>The first visible difference is the starting point.</p>
+
+    <p>Seoul began 2024 with a strongly negative rolling xGD. It improved after the first five matches, and positive stretches became more common later in the season. The quality of the team's performances improved as the season progressed.</p>
+
+    <p>The 2025 pattern was different. Seoul moved into positive territory early, and around match 15 their rolling xGD exceeded one expected goal per match during a particularly strong stretch.</p>
+
+    <p>The problem came later. The trend declined after match 26, and the metric returned to negative territory toward the end of the regular season and again late in the final round.</p>
+
+    <p>Seoul were not a poor team from the beginning of 2025. For most of the season, they created and prevented chances more consistently than in 2024. They failed to turn that advantage into enough points, however, and the underlying performance also declined from the final stages of the regular season.</p>
+
+    <h2>How Seoul's Shot Profile Changed</h2>
+
+    <p>We can now examine Seoul's shot maps.</p>
+
+    <p>The first and most obvious change is the increase in shot volume.</p>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-xg-seoul/06_seoul_shot_map_2024_vs_2025.png" alt="FC Seoul shot maps for 2024 and 2025" loading="lazy" />
+      <figcaption>Figure 7. Marker size represents shot xG, and red markers represent goals.</figcaption>
+    </figure>
+
+    <p>Seoul generated 48.9 xG from 413 shots in 2024. In 2025, they generated 54.5 xG from 560 shots.</p>
+
+    <p>Both shot volume and total xG increased, but by very different amounts. Shots increased by approximately 35.6%, while total xG increased by only 11.4%. As a result, xG per shot fell by about 17.8%, from 0.118 to 0.097.</p>
+
+    <p>Seoul therefore took more shots and accumulated more total xG in 2025, but the average threat of each shot declined.</p>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-xg-seoul/07_seoul_shot_profile_2024_vs_2025.png" alt="FC Seoul shot-profile comparison between 2024 and 2025" loading="lazy" />
+      <figcaption>Figure 8. Comparison of shots from inside the box and central areas, high-quality chances, and xG by attacking context.</figcaption>
+    </figure>
+
+    <p>The locations reflect the same change. The share of shots from inside the box dropped sharply, from 64.6% in 2024 to 55.4% in 2025. The share from central areas also declined slightly, from 66.8% to 65.4%. Seoul attempted more shots from a wider range of locations, including outside the box, without increasing their good-location shots at the same rate.</p>
+
+    <p>Shots with an xG of at least 0.15, used here as the definition of a high-quality chance, barely changed from 115 to 117. Total shots increased by 147, but the number of major opportunities was effectively unchanged.</p>
+
+    <p>Open-play xG rose from 46.2 to 50.3, while set-piece and penalty xG also increased from 2.7 to 4.2. The issue was therefore not the collapse of one particular attacking context. A substantial share of the additional shots simply came from low-probability situations.</p>
+
+    <p>Seoul were not a team that failed to create attacks. Both attacking volume and total expected goals increased. But rather than producing many more high-quality chances, they accumulated xG through a much larger number of lower-quality attempts.</p>
+
+    <h2>Who Generated Seoul's xG?</h2>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-xg-seoul/08_seoul_player_shots_and_xg.png" alt="FC Seoul player shots and xG in 2024 and 2025" loading="lazy" />
+      <figcaption>Figure 9. The horizontal axis shows shot volume, the vertical axis cumulative xG, and marker color the number of goals.</figcaption>
+    </figure>
+
+    <p>Ilyuchenko was the clearest focal point of Seoul's 2024 attack. He produced 11.33 xG and 14 goals from 57 shots, accounting for about 23.2% of the team's total xG. Lingard followed with 5.18 xG from 48 shots, while Cho Young-wook, Willyan, and Lucas Silva played supporting roles.</p>
+
+    <p>In 2025, the center of the attack shifted to Lingard. He recorded 9.51 xG and 10 goals from 96 shots. Cho Young-wook contributed 6.05 xG, Moon Seon-min 5.35, Lucas Silva 5.23, and Dugandzic 4.68.</p>
+
+    <p>The leading player's share of team xG fell from 23.2% to 17.4%, suggesting that the attack became less dependent on a single central striker.</p>
+
+    <p>That does not mean the attack was evenly distributed across the squad. The top five players' combined share actually rose from 49.9% to 56.6%, while the overall concentration changed little. The attack shifted from one dominant player to a group of core contributors.</p>
+
+    <p>Lingard, the leading shooter in 2025, averaged about 0.099 xG per shot, far below Ilyuchenko's 0.199 in 2024. Finishing responsibility was shared among more players, but Seoul had a less distinct focal point repeatedly receiving high-quality chances.</p>
+
+    <h2>A Comparison: How Did Ulsan Change?</h2>
+
+    <p>If Seoul show what happens when a strong xG structure fails to become results, Ulsan provide a useful comparison of how the underlying structure itself can change during a season.</p>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-xg-seoul/09_ulsan_manager_phase_comparison.png" alt="Ulsan performance, expected points, xG, and xGA across coaching phases" loading="lazy" />
+      <figcaption>Figure 10. Ulsan's actual and expected points, xG, and xGA per match across coaching phases.</figcaption>
+    </figure>
+
+    <p>Under Hong Myung-bo in 2023, Ulsan recorded approximately +0.40 xGD per match. In 2024, they remained positive under both Hong (+0.26) and Kim Pan-gon (+0.36), with attacking xG consistently above defensive xGA.</p>
+
+    <p>That pattern continued early in 2025. Across rounds 1 to 24 under Kim Pan-gon, Ulsan averaged about 1.59 xG, 1.13 xGA, and +0.45 xGD per match, the strongest xGD of any phase in this comparison.</p>
+
+    <p>The clear change came after round 25. During the Shin Tae-yong and interim-coach phase, xG fell from 1.59 to 1.25 per match, while xGA rose from 1.13 to 1.46. xGD therefore dropped sharply from +0.45 to -0.21.</p>
+
+    <p>Seoul's strong underlying season failed to translate into results. Ulsan's second half, by contrast, featured simultaneous deterioration in attack and defense. Seoul can be described as <strong>a team whose results fell short of its performance</strong>; Ulsan's later phase was <strong>a period in which the foundation of performance itself weakened</strong>.</p>
+
+    <p class="article-note">These coaching-phase comparisons are descriptive, not causal. Schedule strength, opponents, squad composition, and injuries may also contribute to the differences.</p>
+
+    <h2>Conclusion: Was Kim Gi-dong's Seoul Improving?</h2>
+
+    <p>It is difficult to describe Seoul's 2025 season simply as a failure.</p>
+
+    <p>The league table was disappointing, but Seoul's xG profile was close to the best in the league. They ranked first in both overall xPoints and xGD, and their rolling xGD was strong through the early and middle parts of the season. The structure for creating good chances and limiting opponents was largely working.</p>
+
+    <p>The problem was that the performance did not become results. Seoul scored about 4.5 fewer goals than expected and conceded about 13.6 more than their xGA.</p>
+
+    <p>That makes 2025 Seoul less a "bad team" than <strong>a good-performing team that failed to turn its performance into points</strong>.</p>
+
+    <p>This interpretation also matters when looking at Seoul in 2026. Through 12 matches as of May 5, 2026, Seoul were first with 26 points. Their model-based total of approximately 18.9 xPoints and fourth-place xGD were not as dominant as the actual results, but the team maintained a positive xG structure while finishing and goal prevention improved substantially.</p>
+
+    <p>It is still early in the season, so whether that trend will continue remains uncertain. The clear difference from 2025 is that Seoul's performances are now being converted into actual points.</p>
+
+    <p>Questions and collaboration proposals are welcome at <a href="mailto:thedatadribblers@gmail.com">thedatadribblers@gmail.com</a>.</p>
+
+  </div>
+
+  <footer class="article-footer">
+    <a href="../insights-en.html">← Back to Insights</a>
+    <span>Contact &middot; <a href="mailto:thedatadribblers@gmail.com">thedatadribblers@gmail.com</a></span>
+  </footer>
+
+</article>
+
+<footer class="footer">
+  <p>Contact: <a class="email" href="mailto:thedatadribblers@gmail.com">thedatadribblers [at] gmail.com</a></p>
+  <p>&copy; <span id="year"></span> KAISports | Korea AI Research Society for Sports</p>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

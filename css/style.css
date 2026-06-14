@@ -518,6 +518,36 @@ img { max-width: 100%; display: block; }
   text-align: center;
 }
 
+.language-switch {
+  display: inline-flex;
+  margin: 0 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+}
+.language-switch a {
+  min-width: 76px;
+  padding: 7px 12px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  text-decoration: none;
+}
+.language-switch a + a { border-left: 1px solid var(--border); }
+.language-switch a:hover {
+  color: var(--accent-dark);
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+.language-switch a.active {
+  color: #fff;
+  background: var(--accent);
+}
+.page-header .language-switch { margin-bottom: 14px; }
+
 /* Article (single post) */
 .article {
   max-width: 760px;

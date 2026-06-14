@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Insights — KAISports</title>
-<meta name="description" content="KAISports가 전하는 K리그, 인공지능, 스포츠 과학 기반의 데이터 분석 글입니다." />
+<title>Insights | KAISports</title>
+<meta name="description" content="Data-driven essays on the K League, artificial intelligence, and sports science by KAISports." />
 <link rel="alternate" hreflang="ko" href="https://kaisport.github.io/insights.html" />
 <link rel="alternate" hreflang="en" href="https://kaisport.github.io/insights-en.html" />
 <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
@@ -25,7 +25,7 @@
     <button type="button" class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a class="active" href="insights.html">Insights</a></li>
+      <li><a class="active" href="insights-en.html">Insights</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="presentations.html">Presentations</a></li>
       <li><a href="gatherings.html">Gatherings</a></li>
@@ -36,12 +36,12 @@
 
 <section class="page-header">
   <div class="page-header-inner">
-    <nav class="language-switch" aria-label="언어 선택">
-      <a class="active" href="insights.html" lang="ko" aria-current="page">한국어</a>
-      <a href="insights-en.html" lang="en">English</a>
+    <nav class="language-switch" aria-label="Language">
+      <a href="insights.html" lang="ko">한국어</a>
+      <a class="active" href="insights-en.html" lang="en" aria-current="page">English</a>
     </nav>
     <h1>Insights</h1>
-    <p>K리그와 축구를 데이터로 깊이 들여다보고, 최신 AI 방법론을 읽기 쉬운 글로 전합니다.</p>
+    <p>Data-driven essays on the K League and football, with modern AI methods made readable.</p>
   </div>
 </section>
 
@@ -50,35 +50,22 @@
   <ul class="post-list">
 
     <li class="post-card">
-      <a href="posts/week1-xg.html">
+      <a href="posts/week1-xg-en.html">
         <div class="meta">
-          <span class="tag">K리그 분석</span>
-          <span>2026년 6월 13일</span>
-          <span>· 15분 읽기</span>
+          <span class="tag">K League Analysis</span>
+          <span>June 13, 2026</span>
+          <span>· 15 min read</span>
         </div>
-        <h3>순위표가 말해주지 않는 것: xG로 다시 보는 FC서울의 2025년</h3>
-        <p>2025년 FC서울은 정말 경기력이 나빴던 팀이었을까요? Bepro 이벤트 데이터로 만든 xG와 xPoints를 통해 순위표 뒤에 숨은 경기력과 2026년 반등의 성격을 살펴봅니다.</p>
-        <span class="read-more">글 읽기 →</span>
-      </a>
-    </li>
-
-    <li class="post-card">
-      <a href="posts/welcome-to-kaisports-insights.html">
-        <div class="meta">
-          <span class="tag">공지</span>
-          <span>2026년 5월 6일</span>
-          <span>· 5분 읽기</span>
-        </div>
-        <h3>KAISports Insights를 시작합니다 — 데이터로 풀어보는 K리그</h3>
-        <p>앞으로 어떤 글이 올라올지 미리 만나보는 글입니다. K리그를 데이터로 깊이 들여다보고, 최신 AI 방법론을 친절하게 풀어내며, 데이터 사이언스와 스포츠 과학이 만나는 지점의 이야기를 나누고자 합니다.</p>
-        <span class="read-more">글 읽기 →</span>
+        <h3>What the Table Doesn't Tell You: Reassessing FC Seoul's 2025 Through xG</h3>
+        <p>Was FC Seoul really a poor team in 2025? xG and xPoints reveal the performance hidden behind the league table.</p>
+        <span class="read-more">Read article →</span>
       </a>
     </li>
 
   </ul>
 
   <div class="empty-note">
-    새로운 분석과 연구 이야기는 계속 업데이트됩니다. 질문이나 제안은
+    More analysis and research stories are on the way. Questions and suggestions are welcome at
     <a href="mailto:thedatadribblers@gmail.com">thedatadribblers@gmail.com</a>.
   </div>
 
@@ -86,7 +73,7 @@
 
 <footer class="footer">
   <p>Contact: <a class="email" href="mailto:thedatadribblers@gmail.com">thedatadribblers [at] gmail.com</a></p>
-  <p>&copy; <span id="year"></span> KAISports — Korea AI Research Society for Sports</p>
+  <p>&copy; <span id="year"></span> KAISports | Korea AI Research Society for Sports</p>
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
