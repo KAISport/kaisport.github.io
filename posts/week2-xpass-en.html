@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>An 85% Pass Completion Rate Does Not Tell the Whole Story: K League Pass Difficulty Through xPass | KAISports</title>
+<meta name="description" content="A look at K League pass difficulty, player roles, and pass execution through 2025 SkillCorner xPass and PAx." />
+<link rel="alternate" hreflang="ko" href="https://kaisport.github.io/posts/week2-xpass.html" />
+<link rel="alternate" hreflang="en" href="https://kaisport.github.io/posts/week2-xpass-en.html" />
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+<link rel="alternate icon" href="../assets/icons/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png" />
+<link rel="manifest" href="../site.webmanifest" />
+<meta name="theme-color" content="#0b6e4f" />
+<link rel="stylesheet" href="../css/style.css" />
+
+<style>
+.figure-two-up {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+.figure-two-up img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 760px) {
+  .figure-two-up {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo"><img src="../assets/icons/kaisports-mark.svg" alt="KAISports logo" /></span>
+      <span>KAISports</span>
+    </a>
+    <button type="button" class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a class="active" href="../insights-en.html">Insights</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="../presentations.html">Presentations</a></li>
+      <li><a href="../gatherings.html">Gatherings</a></li>
+      <li><a href="../members.html">Members</a></li>
+    </ul>
+  </div>
+</header>
+
+<article class="article article-report">
+
+  <header class="article-header">
+    <nav class="language-switch" aria-label="Language">
+      <a href="week2-xpass.html" lang="ko">한국어</a>
+      <a class="active" href="week2-xpass-en.html" lang="en" aria-current="page">English</a>
+    </nav>
+    <div class="meta">
+      <span class="tag">K League Analysis</span>
+      <span>June 19, 2026</span>
+      <span>· KAISports Team</span>
+    </div>
+    <h1>An 85% Pass Completion Rate Does Not Tell the Whole Story: K League Pass Difficulty Through xPass</h1>
+  </header>
+
+  <div class="article-body">
+
+    <p>Who had the best pass completion rate in the 2025 K League?</p>
+
+    <p>It is a familiar question. Pass completion appears constantly in broadcasts and match reports. But that number can hide an important difference: not every pass has the same difficulty. A short pass from one centre-back to another and a pass threaded into the box under pressure both appear as one completed or missed pass in the event data. The difficulty of those two actions is completely different.</p>
+
+    <p>That is why this article uses <strong>xPass (Expected Pass Completion)</strong> rather than simple pass completion rate. xPass estimates the probability that each pass will be completed, based on information such as the start location, target location, distance, direction, pressure, and receiving context. In other words, xPass asks a different question.</p>
+
+    <blockquote>
+      <p>Did this player complete many easy passes, or did he complete difficult passes better than expected?</p>
+    </blockquote>
+
+    <p>Using xPass and PAx for 2025 K League players, we can look beneath raw completion rate and separate pass difficulty, role, and execution.</p>
+
+    <h2>What Is xPass?</h2>
+
+    <p>xPass estimates the probability that a pass will be completed.</p>
+
+    <p>For example, a pass with an xPass value of 0.95 is expected to be completed about 95 times out of 100 in similar situations. A pass with an xPass value of 0.60 is much harder and would be expected to be completed about 60 times out of 100.</p>
+
+    <p>xPass commonly uses information such as:</p>
+
+    <ul>
+      <li>Pass start and target locations</li>
+      <li>Pass distance and direction</li>
+      <li>Whether the pass is forward, lateral, or backward</li>
+      <li>Possession phase and attacking context</li>
+      <li>Defensive lines and nearby pressure</li>
+      <li>The receiver's location and situation</li>
+    </ul>
+
+    <p>So xPass does not only ask whether a pass was completed. It also asks how easy or difficult that pass was expected to be.</p>
+
+    <p>From there we can calculate PAx, or Passes Above Expected. PAx subtracts expected completion from the actual pass outcome. A completed pass is counted as 1, a failed pass as 0, and xPass is used as the expectation.</p>
+
+    <p>If a player completes a pass with xPass 0.70, he gains +0.30 PAx. If he misses a pass with xPass 0.90, he receives -0.90 PAx. PAx therefore measures not simply who completed many passes, but <strong>who completed more passes than expected given the difficulty of their attempts</strong>.</p>
+
+    <p>When looking at xPass, the first question is not "who completed the most passes?" It is "what kind of passes was each player asked to make?"</p>
+
+    <p>We begin by looking at the average xPass of K League players. This tells us who was mostly asked to play relatively easy passes, and who had to take on more difficult passing risk.</p>
+
+    <figure class="wide">
+      <div class="figure-two-up">
+        <img src="../assets/insights/k-league-xpass-week2/00_skillcorner_avg_xpass_top_bottom.png" alt="Top and bottom 2025 K League players by average xPass" loading="lazy" />
+        <img src="../assets/insights/k-league-xpass-week2/02_skillcorner_passing_risk_profile.png" alt="Average xPass and actual pass completion rate for 2025 K League players" loading="lazy" />
+      </div>
+      <figcaption>Figure 1. Average xPass shows the average difficulty of a player's passes. Viewed with actual completion rate, it reveals both risk and execution.</figcaption>
+    </figure>
+
+    <p>The players with the highest average xPass were Kim Young-Bin, Kim Ju-Sung, Min-Kwang Jeon, Seong-Hun Park, and Ha Chang-Rae. Their average xPass values were generally between 0.93 and 0.96.</p>
+
+    <p>This does not mean that they are merely "players who only make easy passes." It more likely reflects their role in stable circulation during build-up. Centre-backs and deeper players often post high completion rates, but their decisions to evade pressure and open the next phase still matter to the team's structure.</p>
+
+    <p>At the lower end of average xPass were Pablo Sabbag, Um Won-Sang, Bruno Mota, Lee Shi-Young, and Yago Cesar. These players attempted a higher share of passes from advanced positions, in tighter spaces, and under more difficult timing.</p>
+
+    <p>Average xPass is not a good-or-bad ranking. It is a starting point for understanding what kind of passes a player was asked to make and how much risk he carried.</p>
+
+    <h2>Who Completed More Than Expected?</h2>
+
+    <p>The next metric is PAx.</p>
+
+    <p>PAx creates separation even among players with similar completion rates. A player who completes harder passes can record a higher PAx. A player who misses easy passes can have a lower PAx even if his raw completion rate does not look especially poor.</p>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-xpass-week2/01_skillcorner_pax_top_bottom.png" alt="Top and bottom 2025 K League players by PAx per 100 passes" loading="lazy" />
+      <figcaption>Figure 2. PAx/100 shows how many more passes a player completed than expected per 100 attempts.</figcaption>
+    </figure>
+
+    <p>The 2025 PAx/100 leaders were Kim In-Sung, Bong-Soo Kim, Cho Young-Wook, Um Won-Sang, and S. Min. They were not simply high-completion players. They completed more passes than expected given the difficulty of the passes they attempted.</p>
+
+    <p>Kim In-Sung recorded the highest value. Across 306 passes, he completed 85.9% of them and posted a PAx/100 of +2.56. In other words, for every 100 passes of similar difficulty, he completed about 2.6 more passes than expected.</p>
+
+    <p>Bong-Soo Kim ranked second when his Gimcheon Sangmu and Daejeon Citizen spells were combined by player ID: 1,091 passes, a 91.3% completion rate, and a PAx/100 of +2.50. Looking only at his Daejeon spell, his PAx/100 was +3.48, the highest stint-level figure in the league.</p>
+
+    <p>After excluding goalkeepers because of their positional specificity, the lowest PAx players were J. Asani, Pablo Sabbag, Sung-Won Jang, Lucas Silva, and Yuri Jonathan. This should not be read automatically as poor passing ability. Completion rate and PAx are strongly affected by role and pass selection. Still, these players completed fewer passes than expected given their pass difficulty, with losses likely accumulating in high-risk actions such as attacking combinations, crosses, and forward passes.</p>
+
+    <h2>How Did the PAx Leaders Differ?</h2>
+
+    <p>We can also look at pass maps for players near the top of the PAx ranking.</p>
+
+    <p>Purple lines show completed passes that added more value than expected. Red lines show missed passes with a large loss relative to expectation. These maps do not show every pass. They highlight only the actions where the PAx difference was large enough to reveal a player's passing profile.</p>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-xpass-week2/03_passmap_cho_young_wook.png" alt="Cho Young-Wook 2025 xPass pass map" loading="lazy" />
+      <figcaption>Figure 4. Cho Young-Wook completed several difficult passes above expectation in advanced areas and the right channel.</figcaption>
+    </figure>
+
+    <p>Cho Young-Wook's pass map is a useful example of how to interpret an attacker's completion rate.</p>
+
+    <p>His pass completion rate was 85.9%. Compared with defenders or deep midfielders, that may not look especially high. But the locations change the story. Several difficult completed passes appear in advanced areas, near the box, and especially in the right attacking channel.</p>
+
+    <p>Passes in attacking areas are made under stronger pressure and with passing lanes closing quickly. Completing more than expected in those areas reflects attacking connection, not just safety.</p>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-xpass-week2/04c_passmap_sung_yueng_ki_seoul_pohang_compare.png" alt="Sung-Yueng Ki xPass pass map comparison between Seoul and Pohang Steelers" loading="lazy" />
+      <figcaption>Figure 5. Separating Sung-Yueng Ki's Seoul and Pohang spells shows that his above-expected passing was clearer at Pohang.</figcaption>
+    </figure>
+
+    <p>Sung-Yueng Ki played for both Seoul and Pohang Steelers during the season, so a single season-level number blends together different teams and roles. His Seoul pass map contains both positive completions and costly misses, but they are not strongly concentrated in one zone or direction. His PAx/100 was still positive at +0.94, but the pattern of overperformance was relatively dispersed.</p>
+
+    <p>At Pohang, the picture is clearer. His PAx/100 rose to +2.34, and more of his above-expected completions came from midfield passes into advanced or wide areas. This should be read not only as an individual passing trait, but also as the product of his role at Pohang, the movement around him, and the angles and space available to receivers.</p>
+
+    <p>One detail is worth noting: several red passes went from the left side toward the right advanced area. Ki can switch play and connect forward from midfield, but that pass was not always reliably completed. When opponents closed the right-side forward option early, or when pressure arrived quickly around the receiver, the outcome fell below expectation.</p>
+
+    <p>This creates a tactical hint for both sides. For Ki's own team, the receiving player on the right side may need a better angle and more space before the switch is played. For opponents, when Ki receives the ball on the left, they can design pressure to guide him toward a specific passing option and then close the receiver early.</p>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-xpass-week2/05_passmap_bong_soo_kim.png" alt="Bong-Soo Kim 2025 xPass pass map" loading="lazy" />
+      <figcaption>Figure 6. Bong-Soo Kim produced above-expected completions across multiple zones and ranked second in season-level PAx/100 after combining his clubs by player ID.</figcaption>
+    </figure>
+
+    <p>Bong-Soo Kim's map shows that his value was not concentrated in one area. Purple passes appear across midfield, wide areas, and forward connections. His season-level completion rate was also high at 91.3%, and that number was not built only on repeated easy passes. The forward passes from central areas toward the right side or into the attacking half stand out. If Cho Young-Wook was close to the final attacking connection, and Ki used switches to stretch the pitch, Kim was closer to the midfielder who moved the ball into the next zone.</p>
+
+    <p>This kind of player can be less visible in a team's possession. But xPass reveals the contribution: stable circulation with more completed passes than expected.</p>
+
+    <h2>What an 85% Completion Rate Cannot Tell Us</h2>
+
+    <p>Pass completion rate tells us the outcome. It does not tell us how difficult the pass was.</p>
+
+    <p>Is an 85% completion rate a good number?</p>
+
+    <p>The answer is: it depends.</p>
+
+    <p>If a player mostly makes easy passes from deep areas, 85% may be disappointing. If a player repeatedly attempts difficult passes in attacking areas, 85% can be excellent.</p>
+
+    <p>xPass lets us separate those cases. Completion rate shows the result. xPass shows the difficulty behind that result. PAx then shows who performed better than expected after accounting for that difficulty.</p>
+
+    <p>Good passers identified through xPass do not all look the same. Some circulate possession safely from the back. Some complete difficult connections in attacking areas. Some change the direction of play with long switches. Others create small advantages from midfield over and over again.</p>
+
+    <p>Pass completion rate is a useful starting point. But it cannot fully explain the value of a player's passing on its own. We also need to know where the pass was made, who it was played to, how much pressure was present, and what the pass was trying to achieve.</p>
+
+    <p>Only then does "good passer" become a more specific and useful phrase.</p>
+
+    <p>For questions or collaboration inquiries, contact <a href="mailto:thedatadribblers@gmail.com">thedatadribblers@gmail.com</a>.</p>
+
+  </div>
+
+  <footer class="article-footer">
+    <a href="../insights-en.html">← Back to Insights</a>
+    <span>Contact &middot; <a href="mailto:thedatadribblers@gmail.com">thedatadribblers@gmail.com</a></span>
+  </footer>
+
+</article>
+
+<footer class="footer">
+  <p>Contact: <a class="email" href="mailto:thedatadribblers@gmail.com">thedatadribblers [at] gmail.com</a></p>
+  <p>&copy; <span id="year"></span> KAISports | Korea AI Research Society for Sports</p>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
