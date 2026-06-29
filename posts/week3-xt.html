@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>이태석은 왜 대표팀에서 같은 위협을 만들기 어려웠나 — K리그 xT가 남긴 질문 | KAISports</title>
+<meta name="description" content="2025 K리그를 xT(Expected Threat)로 분석합니다. 위협을 많이 만든 팀과 효율적으로 만든 팀, 패스와 캐리로 위협을 만든 선수들, 그리고 이태석과 김진수의 xT 경로를 통해 K리그 xT가 남긴 질문을 살펴봅니다." />
+<link rel="alternate" hreflang="ko" href="https://kaisport.github.io/posts/week3-xt.html" />
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+<link rel="alternate icon" href="../assets/icons/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png" />
+<link rel="manifest" href="../site.webmanifest" />
+<meta name="theme-color" content="#0b6e4f" />
+<link rel="stylesheet" href="../css/style.css" />
+
+<style>
+.figure-two-up {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+.figure-two-up img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 760px) {
+  .figure-two-up {
+    grid-template-columns: 1fr;
+  }
+}
+.formula {
+  text-align: center;
+  font-size: 1.05rem;
+  margin: 18px 0;
+  color: var(--text);
+}
+.callout {
+  background: #f4f6f5;
+  border-left: 4px solid var(--accent-dark, #0b6e4f);
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin: 28px 0 12px;
+}
+.callout .callout-title {
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+.interactive-embed iframe {
+  width: 100%;
+  height: 760px;
+  border: 1px solid #e2e6e4;
+  border-radius: 8px;
+}
+.interactive-embed .embed-fallback {
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+.table-label {
+  margin: 22px 0 8px;
+  font-weight: 700;
+}
+.source-line {
+  font-size: 0.82rem;
+  color: #6b7670;
+  margin: 6px 0 0;
+  word-break: break-all;
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo"><img src="../assets/icons/kaisports-mark.svg" alt="KAISports logo" /></span>
+      <span>KAISports</span>
+    </a>
+    <button type="button" class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a class="active" href="../insights.html">Insights</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="../presentations.html">Presentations</a></li>
+      <li><a href="../gatherings.html">Gatherings</a></li>
+      <li><a href="../members.html">Members</a></li>
+    </ul>
+  </div>
+</header>
+
+<article class="article article-report">
+
+  <header class="article-header">
+    <div class="meta">
+      <span class="tag">K리그 분석</span>
+      <span>2026년 6월 29일</span>
+      <span>· KAISports 팀</span>
+    </div>
+    <h1>이태석은 왜 대표팀에서 같은 위협을 만들기 어려웠나 — K리그 xT가 남긴 질문</h1>
+  </header>
+
+  <div class="article-body">
+
+    <p>2026년 월드컵, 대한민국은 조별리그에서 멈췄습니다.</p>
+
+    <p>마지막 상대였던 남아공에 패하며 조 3위에 그쳤고, 토너먼트 진출은 무산됐습니다. 기대가 컸던 만큼 실망도 컸습니다. 비판은 곳곳을 향했고, 그 화살의 일부는 왼쪽 풀백 이태석에게도 닿았습니다.</p>
+
+    <p>이태석은 K리그에서의 좋은 활약을 발판으로 오스트리아 리그에 진출했고, 그곳에서도 자리를 잡고 제 몫을 해내고 있습니다. K리그에서, 또 유럽 클럽 무대에서 인정받은 풀백이, 왜 유독 대표팀에서는 같은 모습을 보여주지 못했을까요?</p>
+
+    <p>이 글은 그 질문에 단정적인 답을 내리기보다, K리그에서 이태석이 어떤 방식으로 공격의 위협을 만들었는지 조금 더 면밀히 들여다보려 합니다. 이를 위해 사용하는 지표가 <strong>xT(Expected Threat)</strong>입니다. xT는 패스나 캐리로 공이 이동했을 때, 그 행동이 팀의 득점 위협을 얼마나 높였는지를 보여줍니다.</p>
+
+    <p>2025년 K리그를 xT로 살펴보고, 마지막에 다시 이태석에게 돌아가 보겠습니다. 그가 K리그에서 만들었던 위협은 어떤 위치에서, 어떤 패스를 통해 만들어졌는지. 그리고 그 위협이 대표팀에서도 같은 방식으로 나타났는지, 혹은 다른 조건 속에서 달라졌을 가능성이 있는지, K리그 데이터가 남기는 질문을 살펴보겠습니다.</p>
+
+    <h2>1. xT란 무엇인가</h2>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-xt-week3/00_karun_singh.png" alt="xT를 제안한 아스널 데이터 사이언티스트 Karun Singh" loading="lazy" />
+      <figcaption>그림 1. xT를 제안한 아스널의 데이터 사이언티스트 Karun Singh.
+        <span class="source-line">출처: https://www.linkedin.com/posts/statsbomb_statsbombconference-activity-7052241978985492480-KXuZ/</span>
+      </figcaption>
+    </figure>
+
+    <p>xT는 아스널의 데이터 사이언티스트 Karun Singh이 2019년 공개한 위치 기반 공격 가치 모델입니다. 슈팅이나 어시스트만으로는 잡히지 않는 빌드업의 기여를 평가하기 위해, 피치 위 모든 위치에 위협도를 부여하는 방식입니다.</p>
+
+    <p>xT는 현재 가장 널리 알려진 공격 가치 지표 중 하나이고, K리그 중계 화면에서도 xT를 활용한 분석 자료들을 쉽게 접할 수 있습니다.</p>
+
+    <figure class="wide">
+      <div class="figure-two-up">
+        <img src="../assets/insights/k-league-xt-week3/01_broadcast_match_dominance.png" alt="K리그 중계의 xT 기반 매치 도미넌스 그래픽" loading="lazy" />
+        <img src="../assets/insights/k-league-xt-week3/02_broadcast_amano_xt.png" alt="K리그 중계의 선수별 xT 분포 그래픽" loading="lazy" />
+      </div>
+      <figcaption>그림 2. K리그 중계에서도 xT를 활용한 매치 도미넌스, 선수별 위협 분포 그래픽이 쓰인다.
+        <span class="source-line">출처: https://m.cafe.daum.net/soccerworldcafe/dp1Q/30931</span>
+      </figcaption>
+    </figure>
+
+    <p>xT의 원리는 비교적 직관적입니다. 피치 위의 모든 위치는 같은 공격 가치를 갖지 않습니다. 상대 골문 앞 중앙처럼 다음 행동에서 슈팅으로 이어지기 쉬운 공간은 높은 위협도를 갖는 반면, 자기 진영의 측면처럼 득점과 거리가 먼 공간의 위협도는 낮습니다. 따라서 공이 낮은 위협도의 위치에서 높은 위협도의 위치로 이동할수록, 그 행동이 만든 xT도 커집니다.</p>
+
+    <p class="formula">xT Added = xT(도착 위치) − xT(시작 위치)</p>
+
+    <p>예를 들어 후방에서 옆으로 연결하는 패스는 성공하더라도 공의 위치가 크게 달라지지 않아 xT가 거의 증가하지 않습니다. 반대로 상대 수비 라인 사이를 지나 중앙이나 하프스페이스, 박스 앞쪽으로 공을 옮기는 패스는 이후 슈팅으로 이어질 가능성을 높이기 때문에 더 큰 xT를 얻습니다.</p>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-xt-week3/03_xt_surface_examples.png" alt="Bepro 데이터로 학습한 xT 표면과, 같은 성공 패스라도 다른 xT가 부여되는 예시" loading="lazy" />
+      <figcaption>그림 3. (왼쪽) Bepro 데이터로 학습한 xT 표면. (오른쪽) 모두 성공한 패스이지만 후방 횡패스·측면 전진 패스·중앙 침투 패스의 xT 증가가 서로 다르다.</figcaption>
+    </figure>
+
+    <p>왼쪽은 Bepro 데이터로 학습한 xT 표면입니다. 상대 골문 앞 중앙으로 갈수록 위협도가 가파르게 높아집니다. 오른쪽은 모두 성공한 패스이지만, 후방 횡패스는 xT가 거의 증가하지 않고, 측면 전진 패스는 작은 증가를, 중앙·하프스페이스로 향하는 패스는 더 큰 증가를 만듭니다.</p>
+
+    <p>여기서 xT와 xPass의 차이도 분명히 해둘 필요가 있습니다. xPass가 해당 패스가 얼마나 성공하기 어려웠는지를 평가한다면, xT는 성공한 패스나 캐리가 공을 얼마나 더 위험한 위치로 이동시켰는지를 평가합니다. 다시 말해, xT는 패스의 난이도보다 그 행동 이후 공이 놓인 위치의 공격적 가치를 보는 지표입니다.</p>
+
+    <h2>2. 위협을 많이 만든 팀과, 더 다이렉트하게 위협을 만든 팀</h2>
+
+    <p>이제 시선을 팀으로 옮겨보겠습니다. 2025년 K리그에서 가장 많은 위협을 만든 팀은 어디였을까요?</p>
+
+    <p>아래 그래프를 통해 K리그 팀들의 xT를 확인할 수 있습니다. 그래프의 오른쪽으로 갈수록 시즌 동안 더 많은 위협을 쌓은 팀이고, 위로 갈수록 한 번의 행동이 평균적으로 더 큰 xT 증가를 만든 팀입니다.</p>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-xt-week3/04_team_volume_vs_density.png" alt="2025 K리그 팀별 총 xT와 행동당 xT 비교" loading="lazy" />
+      <figcaption>그림 4. 가로축은 시즌 총 xT(위협의 양), 세로축은 100행동당 xT(행동당 위협 밀도), 점 크기는 소유당 행동 수를 나타낸다.</figcaption>
+    </figure>
+
+    <p>경기당 xT 기준 1위는 전북 현대였습니다. 전북은 그해 리그 우승까지 차지했으니, 여기까지는 비교적 직관적인 결과입니다. 그러나 순위를 조금 더 내려다보면 이야기가 달라집니다. 경기당 xT 2위였던 울산은 리그 9위에 그쳤고, 3위 대구는 결국 강등을 피하지 못했습니다. 공격 과정에서 위협을 많이 만들었다는 사실과 최종 성적이 반드시 같은 방향으로 움직이지는 않았습니다.</p>
+
+    <p>전북은 두 기준 모두 가장 높은 위치에 있었습니다. 공격의 총량이 가장 컸을 뿐 아니라, 행동 하나하나도 상대적으로 더 큰 위협 증가로 이어졌습니다. 대구와 김천 역시 상단에 위치합니다. 이들은 비교적 적은 행동 안에서도 공을 더 위험한 위치로 옮기는 장면이 많았던 팀들입니다.</p>
+
+    <p>반대로 서울과 울산은 총 xT는 높지만, 행동당 xT는 평균선 아래에 위치했습니다. 한 번의 패스나 캐리로 위협을 크게 끌어올리기보다, 여러 차례의 전개를 통해 위협을 누적하는 공격 방식에 가까웠습니다. 수원FC는 전체 xT 규모는 크지 않았지만 행동당 xT는 높은 편으로, 적은 행동 안에서 위협을 만드는 경향을 보였습니다.</p>
+
+    <p>다만 위쪽에 있다고 해서 곧바로 더 좋은 공격 팀이라는 뜻은 아닙니다. 대구는 행동당 xT가 높은 팀이었지만 강등됐습니다. xT는 공을 위험한 위치로 옮긴 과정을 보여줄 뿐, 그 위협이 좋은 슈팅과 득점으로 이어졌는지, 또 팀이 수비에서 어떤 결과를 냈는지까지는 설명하지 못합니다. 대구의 사례는 뒤에서 xT가 보여준 위협과 실제 성적이 왜 엇갈렸는지를 조금 더 자세히 살펴보겠습니다.</p>
+
+    <h2>3. 같은 위협, 다른 방식 — 패스와 캐리로 만든 선수별 xT</h2>
+
+    <p>팀이 만든 xT는 결국 선수들의 행동에서 나옵니다. 그러나 같은 xT라도 만들어내는 방식은 다릅니다. 어떤 선수는 전진 패스로 공을 위험 지역으로 보내고, 어떤 선수는 직접 공을 운반하는 캐리로 수비 라인을 넘어섭니다.</p>
+
+    <p>먼저 2025년 K리그 선수별 총 xT와 패스·캐리 xT 순위를 살펴보겠습니다.</p>
+
+    <p class="table-label">Total xT Created | 2025</p>
+    <div class="article-table" role="region" aria-label="2025 K리그 선수별 총 xT 순위" tabindex="0">
+      <table>
+        <thead>
+          <tr><th>Rank</th><th>Player</th><th>Team</th><th>xT Created</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Kim Jin-Su</td><td>FC Seoul</td><td>9.218</td></tr>
+          <tr><td>2</td><td>Lee Dong-Gyeong</td><td>Gimcheon Sangmu</td><td>9.092</td></tr>
+          <tr><td>3</td><td>Lingard</td><td>FC Seoul</td><td>8.962</td></tr>
+          <tr><td>4</td><td>Cesinha</td><td>Daegu FC</td><td>8.496</td></tr>
+          <tr><td>5</td><td>Luan</td><td>Suwon FC</td><td>7.757</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="table-label">Pass xT Created | 2025</p>
+    <div class="article-table" role="region" aria-label="2025 K리그 선수별 패스 xT 순위" tabindex="0">
+      <table>
+        <thead>
+          <tr><th>Rank</th><th>Player</th><th>Team</th><th>Pass xT</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Kim Jin-Su</td><td>FC Seoul</td><td>9.931</td></tr>
+          <tr><td>2</td><td>Lee Dong-Gyeong</td><td>Gimcheon Sangmu</td><td>8.978</td></tr>
+          <tr><td>3</td><td>Lingard</td><td>FC Seoul</td><td>8.830</td></tr>
+          <tr><td>4</td><td>Cesinha</td><td>Daegu FC</td><td>7.600</td></tr>
+          <tr><td>5</td><td>Luan</td><td>Suwon FC</td><td>7.237</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="table-label">Carry xT Created | 2025</p>
+    <div class="article-table" role="region" aria-label="2025 K리그 선수별 캐리 xT 순위" tabindex="0">
+      <table>
+        <thead>
+          <tr><th>Rank</th><th>Player</th><th>Team</th><th>Carry xT</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Jorge</td><td>Pohang Steelers</td><td>1.080</td></tr>
+          <tr><td>2</td><td>Juninho</td><td>Pohang Steelers</td><td>0.986</td></tr>
+          <tr><td>3</td><td>Asani</td><td>Gwangju FC</td><td>0.920</td></tr>
+          <tr><td>4</td><td>Cesinha</td><td>Daegu FC</td><td>0.895</td></tr>
+          <tr><td>5</td><td>Moon Seon-Min</td><td>FC Seoul</td><td>0.887</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>눈에 띄는 것은 전형적인 9번 스트라이커보다 풀백과 플레이메이커가 상위권에 많다는 점입니다. xT는 누가 슈팅을 마무리했는지가 아니라, 그 슈팅이 가능해지는 위치까지 누가 공을 전진시켰는지를 평가합니다. 그래서 빌드업과 공격 전개의 시작점에 자주 서는 풀백, 그리고 전진 패스와 운반을 반복하는 플레이메이커가 높은 xT를 기록하기 쉽습니다.</p>
+
+    <p>다만 순위만으로는 각 선수가 어떤 방식으로 위협을 만들었는지까지는 알 수 없습니다. 이를 위해 선수별 누적 xT를 패스와 캐리로 나눠 비교했습니다. 그래프의 오른쪽으로 갈수록 패스를 통해 더 많은 위협을 만든 선수이고, 위로 갈수록 직접 공을 운반하며 더 많은 위협을 만든 선수입니다. 파란 점은 패스 xT 비중이 높은 선수, 주황 점은 캐리 xT 비중이 상대적으로 높은 선수를 뜻합니다.</p>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-xt-week3/05_player_pass_vs_carry.png" alt="2025 K리그 선수별 누적 패스 xT와 캐리 xT 비교" loading="lazy" />
+      <figcaption>그림 5. 선수별 누적 패스 xT(가로)와 캐리 xT(세로). 김진수는 오른쪽 끝(패스형), 조르지, 주닝요, 아사니 등은 위쪽(캐리형)에 위치한다.</figcaption>
+    </figure>
+
+    <p>그래프의 오른쪽 끝에는 김진수가 있습니다. 김진수는 패스 xT가 리그 최고 수준인 반면 캐리 xT는 음수였습니다. 직접 공을 몰고 올라가기보다, 왼쪽에서 전진 패스와 크로스로 공을 더 위험한 위치에 보내는 패스형 풀백에 가깝습니다.</p>
+
+    <p>세징야는 패스와 캐리 모두에서 높은 xT를 기록했습니다. 직접 전진한 뒤 패스로 공격을 이어가는 복합형 공격 자원으로 볼 수 있습니다. 린가드와 이동경도 패스 중심이지만, 캐리에서도 일정 수준의 위협을 더했습니다.</p>
+
+    <p>반대로 조르지, 주닝요, 아사니, 문선민 등은 캐리 비중이 높은 선수들입니다. 이들은 패스보다 직접 전진하며 공의 위치를 바꾸는 방식으로 xT를 만들었습니다.</p>
+
+    <p>결국 같은 xT라도 만들어지는 방식은 다릅니다. 어떤 선수는 패스로, 어떤 선수는 캐리로, 또 어떤 선수는 두 방식을 섞어 위협을 쌓습니다.</p>
+
+    <h2>4. 이태석과 김진수 — 같은 자리, 다른 위협</h2>
+
+    <p>이태석은 2025년 시즌 중 오스트리아 아우스트리아 빈으로 이적하면서 K리그에서 22경기만 뛰었음에도 누적 xT 리그 19위에 올랐습니다. 풀 시즌을 소화하지 못한 점을 고려하면, 짧은 기간에도 적지 않은 공격 위협을 만들었다고 볼 수 있습니다.</p>
+
+    <p>다만 누적 xT 순위만으로는 이태석이 어떤 방식으로 위협을 만들었는지 알기 어렵습니다. 이를 더 분명히 보기 위해, 이태석과 김진수가 기록한 상위 45개 양의 xT 행동을 피치 위에 표시했습니다.</p>
+
+    <figure class="wide">
+      <div class="figure-two-up">
+        <img src="../assets/insights/k-league-xt-week3/06_lee_taeseok_routes.png" alt="이태석 2025 K리그 상위 xT 경로" loading="lazy" />
+        <img src="../assets/insights/k-league-xt-week3/07_kim_jinsu_routes.png" alt="김진수 2025 K리그 상위 xT 경로" loading="lazy" />
+      </div>
+      <figcaption>그림 6. 이태석(왼쪽)과 김진수(오른쪽)의 상위 45개 양의 xT 행동. 두 선수 모두 왼쪽 풀백이지만 높은 xT가 만들어진 위치가 다르다.</figcaption>
+    </figure>
+
+    <p>두 선수 모두 캐리보다 패스를 통해 위협을 만드는 왼쪽 풀백입니다. 그러나 높은 xT가 만들어진 위치는 뚜렷하게 달랐습니다.</p>
+
+    <p>김진수의 주요 xT 패스는 상대 페널티박스와 가까운 왼쪽 공격 지역에 집중돼 있습니다. 측면 깊은 곳이나 박스 바깥에서 중앙과 박스 안쪽으로 보내는 크로스와 전진 패스가 반복적으로 높은 xT를 만들었습니다. 상위 45개 양의 xT 행동만으로도 김진수는 누적 5.11의 xT를 기록했습니다.</p>
+
+    <p>반면 이태석의 높은 xT는 박스 근처에만 모여 있지 않았습니다. 중원과 후방의 왼쪽 측면에서 시작해 전방 측면이나 수비 라인 뒤로 연결되는 패스가 더 많이 보입니다. 박스 가까이에서 마지막 크로스를 올리기보다, 공격이 완성되기 전 단계에서 전방 공간으로 빠르게 보내는 얼리크로스와 측면 전진 패스가 이태석의 주요 위협 경로였습니다.</p>
+
+    <p>이 차이는 이번 월드컵에서 보였던 이태석의 역할과도 대비됩니다. 대표팀에서는 상대 진영 높은 측면까지 올라가 크로스를 시도하는 장면이 많았습니다. 반면 K리그에서 이태석이 가장 큰 위협을 만들었던 장면은, 더 이른 위치에서 공격의 방향을 바꾸는 패스였습니다.</p>
+
+    <p>물론 이 차이만으로 대표팀에서의 퍼포먼스를 설명할 수는 없습니다. 상대 수비의 수준, 박스 안 움직임, 동료와의 호흡, 경기 상황도 함께 봐야 합니다. 다만 한 가지 질문은 남습니다. 대표팀에서 이태석에게 요구된 역할은, 그가 K리그에서 가장 큰 위협을 만들던 방식과 얼마나 같았을까요?</p>
+
+    <h2>5. 위협을 만들었지만, 기회로 완성하지 못한 대구</h2>
+
+    <p>대구는 시즌 전체 xT와 행동당 xT 모두 상위권에 위치했습니다. 공격의 양도 적지 않았고, 적은 행동 안에서 공을 위험 지역으로 옮기는 장면도 많았습니다. 그러나 그 위협은 결국 강등을 막을 만큼의 결과로 이어지지 못했습니다.</p>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-xt-week3/08_daegu_dependency_conversion.png" alt="대구 선수별 xT 의존도, 상위 3명 비중, xT의 xG 전환율 비교" loading="lazy" />
+      <figcaption>그림 7. (왼쪽) 대구 선수별 xT 의존도, (가운데) 팀별 상위 3명의 양의 xT 비중, (오른쪽) 팀별 xT의 xG 전환율. 대구는 핵심 선수 집중도가 높고 xT의 xG 전환율은 리그 최저였다.</figcaption>
+    </figure>
+
+    <p>대구의 xT는 세징야와 황재원을 중심으로 만들어졌습니다. 세징야는 8.50, 황재원은 6.10의 xT를 기록하며 팀 공격의 큰 비중을 차지했습니다. 실제로 대구의 상위 3명은 팀 전체 양의 xT 가운데 약 40%를 만들었는데, 이는 리그에서 두 번째로 높은 비중입니다. 대구의 공격 위협은 핵심 선수 몇 명에게 상당히 집중돼 있었습니다.</p>
+
+    <p>더 큰 문제는 xT 이후였습니다. 대구는 xT 단계에서 만든 위협을 xG로 바꾸는 비율이 리그 최저였습니다. 위험한 위치까지 공을 보냈지만, 그 이후의 패스·박스 안 움직임·슈팅 선택이 충분히 높은 질의 기회로 이어지지 않았다는 의미입니다.</p>
+
+    <p>대구의 사례는 xT가 공격의 전진 과정을 보여주는 지표라는 점을 다시 확인시켜 줍니다. 위험 지역까지 공을 옮긴 뒤 그것을 기회와 득점으로 완성하는 과정, 그리고 수비에서의 결과는 xT만으로 설명할 수 없습니다.</p>
+
+    <h2>6. 팀마다 다른 xT 지도</h2>
+
+    <p>마지막으로, xT는 리그 전체의 평균적인 위치 가치만으로 계산할 수도 있지만, 팀별 행동 패턴을 따로 학습하면 조금 다른 그림이 나옵니다.</p>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-xt-week3/09_team_specific_maps.png" alt="팀별 데이터로 학습한 xT 표면과 리그 평균 대비 비교" loading="lazy" />
+      <figcaption>그림 8. (위) 각 팀의 데이터로 학습한 xT 표면, (아래) 리그 평균과의 차이. 골문 앞 중앙이 가장 높은 것은 공통이지만, 박스 앞·하프스페이스·측면의 상대적 가치는 팀마다 다르다.</figcaption>
+    </figure>
+
+    <p>위쪽 지도는 각 팀의 데이터로 만든 xT 표면이고, 아래쪽 지도는 이를 리그 평균과 비교한 결과입니다. 모든 팀에서 상대 골문 앞 중앙의 위협도가 가장 높은 것은 같습니다. 그러나 박스 앞과 하프스페이스, 측면에서 어느 위치의 가치가 상대적으로 더 높게 나타나는지는 팀마다 조금씩 달랐습니다.</p>
+
+    <p>여기서 중요한 점은 이 지도가 “각 팀이 실제로 어느 구역에서 xT를 가장 많이 만들었는가”를 직접 보여주는 것은 아니라는 점입니다. 대신 같은 위치에서 공을 가졌을 때, 그 팀의 이후 전개가 리그 평균보다 더 위협적으로 이어졌는지를 보여줍니다.</p>
+
+    <p>이런 팀별 xT 지도는 단순히 시각적으로 비교하는 데서 끝나지 않습니다. 상대팀 분석에서는 어느 구역에서 공을 잡았을 때 위협적인 전개가 자주 이어지는지 확인할 수 있고, 우리 팀 분석에서는 어떤 공간을 통해 공격의 가치를 쌓는 경향이 있는지 점검할 수 있습니다.</p>
+
+    <div class="callout">
+      <p class="callout-title">💡 인터랙티브 시각화</p>
+      <p>K리그 팀별 xT를 직접 탐색할 수 있는 인터랙티브 시각화도 함께 만들었습니다. 팀을 선택하면 그 팀이 어느 구역에서 위협을 만들었는지 확인할 수 있고, 특정 시작 구역을 선택하면 그곳에서 출발한 패스와 캐리가 주로 어느 공간으로 향했는지, 어떤 선수가 xT를 만들었는지, 그리고 대표적인 고-xT 경로는 무엇이었는지 살펴볼 수 있습니다.</p>
+    </div>
+
+    <div class="interactive-embed">
+      <iframe src="../assets/insights/k-league-xt-week3/team_danger_zones_2025.html" title="K리그 팀별 xT danger zone 인터랙티브 시각화" loading="lazy"></iframe>
+      <p class="embed-fallback">시각화가 보이지 않으면 <a href="../assets/insights/k-league-xt-week3/team_danger_zones_2025.html" target="_blank" rel="noopener">새 탭에서 전체 화면으로 열기</a>를 눌러 주세요.</p>
+    </div>
+
+    <p>이를 통해 상대팀 분석에서는 어떤 구역에서 시작된 공격을 특히 경계해야 하는지 확인할 수 있고, 우리 팀 분석에서는 어느 공간과 어떤 선수를 통해 공격의 위협이 만들어지는지 점검할 수 있습니다.</p>
+
+    <h2>결론: 선수의 xT는 혼자 만들어지지 않는다</h2>
+
+    <p>이 글의 목적은 특정 선수를 옹호하거나, 대표팀에서의 퍼포먼스를 하나의 지표로 설명하려는 것이 아닙니다. 다만 선수를 평가할 때 결과만 보는 대신, 그 선수가 <strong>어떤 행동에서 가치를 만들었는지</strong>, 그리고 그 행동이 나올 수 있는 <strong>환경이 갖춰졌는지</strong>까지 함께 살펴볼 필요가 있다는 점을 보여주고 싶었습니다.</p>
+
+    <p>이태석과 김진수는 모두 패스를 통해 위협을 만드는 왼쪽 풀백이었습니다. 그러나 김진수의 xT는 박스 가까운 지역의 마지막 전개에서, 이태석의 xT는 더 이른 위치에서 전방 공간을 향하는 얼리크로스와 측면 전진 패스에서 주로 만들어졌습니다.</p>
+
+    <p>풀백이 높은 위치에서 크로스를 반복했다고 해서, 그것이 그 선수에게 가장 적합한 역할이었다고 단정할 수는 없습니다. 반대로 K리그에서 높은 xT를 기록했다고 해서, 대표팀에서도 같은 수치와 장면이 그대로 재현될 것이라고 기대할 수도 없습니다. 공을 받을 위치, 동료의 움직임, 상대 수비의 형태, 팀의 공격 구조가 달라지면 같은 선수의 선택과 가치도 달라집니다.</p>
+
+    <p>xT는 정답을 주는 지표가 아닙니다. 대신 이런 질문을 남깁니다.</p>
+
+    <blockquote>
+      이 선수는 어떤 행동에서 가장 큰 가치를 만들었는가? 그리고 팀은 그 행동이 다시 나올 수 있는 환경을 만들어주고 있는가?
+    </blockquote>
+
+    <p>한 장면이나 하나의 결과가 아니라, 선수가 가장 잘할 수 있는 행동과 그 행동이 가능했던 구조까지 함께 보는 것. 그것이 xT가 축구를 읽는 데 주는 가장 큰 도움일 것입니다.</p>
+
+    <p>분석에 대한 질문이나 협업 제안은 <a href="mailto:thedatadribblers@gmail.com">thedatadribblers@gmail.com</a>으로 보내 주세요.</p>
+
+  </div>
+
+  <footer class="article-footer">
+    <a href="../insights.html">← Insights 목록으로</a>
+    <span>문의 &middot; <a href="mailto:thedatadribblers@gmail.com">thedatadribblers@gmail.com</a></span>
+  </footer>
+
+</article>
+
+<footer class="footer">
+  <p>Contact: <a class="email" href="mailto:thedatadribblers@gmail.com">thedatadribblers [at] gmail.com</a></p>
+  <p>&copy; <span id="year"></span> KAISports | Korea AI Research Society for Sports</p>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
