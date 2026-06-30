@@ -147,11 +147,11 @@
     <p>예를 들어 후방에서 옆으로 연결하는 패스는 성공하더라도 공의 위치가 크게 달라지지 않아 xT가 거의 증가하지 않습니다. 반대로 상대 수비 라인 사이를 지나 중앙이나 하프스페이스, 박스 앞쪽으로 공을 옮기는 패스는 이후 슈팅으로 이어질 가능성을 높이기 때문에 더 큰 xT를 얻습니다.</p>
 
     <figure class="wide">
-      <img src="../assets/insights/k-league-xt-week3/03_xt_surface_examples.png" alt="K리그 데이터로 학습한 xT 표면과, 같은 성공 패스라도 다른 xT가 부여되는 예시" loading="lazy" />
-      <figcaption>그림 3. (왼쪽) K리그 데이터로 학습한 xT 표면. (오른쪽) 모두 성공한 패스이지만 후방 횡패스·측면 전진 패스·중앙 침투 패스의 xT 증가가 서로 다르다.</figcaption>
+      <img src="../assets/insights/k-league-xt-week3/03_xt_surface_examples_ko.png" alt="K리그 커스텀 xT 히트맵과, 같은 성공 패스라도 다른 xT가 부여되는 예시" loading="lazy" />
+      <figcaption>그림 3. (왼쪽) K리그 데이터로 만든 커스텀 xT 히트맵. (오른쪽) 모두 성공한 패스이지만 시작 위치와 도착 위치에 따라 xT 증가가 서로 다르다.</figcaption>
     </figure>
 
-    <p>왼쪽은 K리그 데이터로 학습한 xT 표면입니다. 상대 골문 앞 중앙으로 갈수록 위협도가 가파르게 높아집니다. 오른쪽은 모두 성공한 패스이지만, 후방 횡패스는 xT가 거의 증가하지 않고, 측면 전진 패스는 작은 증가를, 중앙·하프스페이스로 향하는 패스는 더 큰 증가를 만듭니다.</p>
+    <p>왼쪽은 K리그 데이터로 만든 커스텀 xT 히트맵입니다. 상대 골문 앞 중앙으로 갈수록 위협도가 가파르게 높아집니다. 오른쪽은 모두 성공한 패스이지만, 후방 횡패스는 xT가 거의 증가하지 않고, 더 위험한 공간으로 향하는 전진 패스는 더 큰 증가를 만듭니다.</p>
 
     <p>여기서 xT와 xPass의 차이도 분명히 해둘 필요가 있습니다. xPass가 해당 패스가 얼마나 성공하기 어려웠는지를 평가한다면, xT는 성공한 패스나 캐리가 공을 얼마나 더 위험한 위치로 이동시켰는지를 평가합니다. 다시 말해, xT는 패스의 난이도보다 그 행동 이후 공이 놓인 위치의 공격적 가치를 보는 지표입니다.</p>
 
@@ -162,7 +162,7 @@
     <p>아래 그래프를 통해 K리그 팀들의 xT를 확인할 수 있습니다. 그래프의 오른쪽으로 갈수록 시즌 동안 더 많은 위협을 쌓은 팀이고, 위로 갈수록 한 번의 행동이 평균적으로 더 큰 xT 증가를 만든 팀입니다.</p>
 
     <figure class="wide">
-      <img src="../assets/insights/k-league-xt-week3/04_team_volume_vs_density.png" alt="2025 K리그 팀별 총 xT와 행동당 xT 비교" loading="lazy" />
+      <img src="../assets/insights/k-league-xt-week3/04_team_volume_vs_density_ko.png" alt="2025 K리그 팀별 총 xT와 행동당 xT 비교" loading="lazy" />
       <figcaption>그림 4. 가로축은 시즌 총 xT(위협의 양), 세로축은 100행동당 xT(행동당 위협 밀도), 점 크기는 소유당 행동 수를 나타낸다.</figcaption>
     </figure>
 
@@ -179,7 +179,7 @@
     <p>대구는 시즌 전체 xT와 행동당 xT 모두 상위권에 위치했습니다. 공격의 양도 적지 않았고, 적은 행동 안에서 공을 위험 지역으로 옮기는 장면도 많았습니다. 그러나 그 위협은 결국 강등을 막을 만큼의 결과로 이어지지 못했습니다.</p>
 
     <figure class="wide">
-      <img src="../assets/insights/k-league-xt-week3/08_daegu_dependency_conversion.png" alt="대구 선수별 xT 의존도, 상위 3명 비중, xT의 xG 전환율 비교" loading="lazy" />
+      <img src="../assets/insights/k-league-xt-week3/08_daegu_dependency_conversion_ko.png" alt="대구 선수별 xT 의존도, 상위 3명 비중, xT의 xG 전환율 비교" loading="lazy" />
       <figcaption>그림 5. (왼쪽) 대구 선수별 xT 의존도, (가운데) 팀별 상위 3명의 양의 xT 비중, (오른쪽) 팀별 xT의 xG 전환율. 대구는 핵심 선수 집중도가 높고 xT의 xG 전환율은 리그 최저였다.</figcaption>
     </figure>
 
@@ -189,20 +189,20 @@
 
     <p>대구의 사례는 xT가 공격의 전진 과정을 보여주는 지표라는 점을 다시 확인시켜 줍니다. 위험 지역까지 공을 옮긴 뒤 그것을 기회와 득점으로 완성하는 과정, 그리고 수비에서의 결과는 xT만으로 설명할 수 없습니다.</p>
 
-    <h2>4. 팀마다 다른 xT 지도</h2>
+    <h2>4. 팀마다 다른 xT 히트맵</h2>
 
     <p>xT는 리그 전체의 평균적인 위치 가치만으로 계산할 수도 있지만, 팀별 행동 패턴을 따로 학습하면 조금 다른 그림이 나옵니다.</p>
 
     <figure class="wide">
-      <img src="../assets/insights/k-league-xt-week3/09_team_specific_maps.png" alt="팀별 데이터로 학습한 xT 표면과 리그 평균 대비 비교" loading="lazy" />
-      <figcaption>그림 6. (위) 각 팀의 데이터로 학습한 xT 표면, (아래) 리그 평균과의 차이. 골문 앞 중앙이 가장 높은 것은 공통이지만, 박스 앞·하프스페이스·측면의 상대적 가치는 팀마다 다르다.</figcaption>
+      <img src="../assets/insights/k-league-xt-week3/09_team_specific_maps_ko.png" alt="팀별 K리그 커스텀 xT 히트맵과 리그 평균 대비 비교" loading="lazy" />
+      <figcaption>그림 6. (위) 팀별 K리그 커스텀 xT 히트맵, (아래) 리그 평균과의 차이. 골문 앞 중앙이 가장 높은 것은 공통이지만, 박스 앞·하프스페이스·측면의 상대적 가치는 팀마다 다르다.</figcaption>
     </figure>
 
-    <p>위쪽 지도는 각 팀의 데이터로 만든 xT 표면이고, 아래쪽 지도는 이를 리그 평균과 비교한 결과입니다. 모든 팀에서 상대 골문 앞 중앙의 위협도가 가장 높은 것은 같습니다. 그러나 박스 앞과 하프스페이스, 측면에서 어느 위치의 가치가 상대적으로 더 높게 나타나는지는 팀마다 조금씩 달랐습니다.</p>
+    <p>위쪽 히트맵은 각 팀의 데이터로 만든 커스텀 xT 히트맵이고, 아래쪽 히트맵은 이를 리그 평균과 비교한 결과입니다. 모든 팀에서 상대 골문 앞 중앙의 위협도가 가장 높은 것은 같습니다. 그러나 박스 앞과 하프스페이스, 측면에서 어느 위치의 가치가 상대적으로 더 높게 나타나는지는 팀마다 조금씩 달랐습니다.</p>
 
-    <p>여기서 중요한 점은 이 지도가 “각 팀이 실제로 어느 구역에서 xT를 가장 많이 만들었는가”를 직접 보여주는 것은 아니라는 점입니다. 대신 같은 위치에서 공을 가졌을 때, 그 팀의 이후 전개가 리그 평균보다 더 위협적으로 이어졌는지를 보여줍니다.</p>
+    <p>여기서 중요한 점은 이 히트맵이 “각 팀이 실제로 어느 구역에서 xT를 가장 많이 만들었는가”를 직접 보여주는 것은 아니라는 점입니다. 대신 같은 위치에서 공을 가졌을 때, 그 팀의 이후 전개가 리그 평균보다 더 위협적으로 이어졌는지를 보여줍니다.</p>
 
-    <p>이런 팀별 xT 지도는 단순히 시각적으로 비교하는 데서 끝나지 않습니다. 상대팀 분석에서는 어느 구역에서 공을 잡았을 때 위협적인 전개가 자주 이어지는지 확인할 수 있고, 우리 팀 분석에서는 어떤 공간을 통해 공격의 가치를 쌓는 경향이 있는지 점검할 수 있습니다.</p>
+    <p>이런 팀별 xT 히트맵은 단순히 시각적으로 비교하는 데서 끝나지 않습니다. 상대팀 분석에서는 어느 구역에서 공을 잡았을 때 위협적인 전개가 자주 이어지는지 확인할 수 있고, 우리 팀 분석에서는 어떤 공간을 통해 공격의 가치를 쌓는 경향이 있는지 점검할 수 있습니다.</p>
 
     <div class="callout">
       <p class="callout-title">💡 인터랙티브 시각화</p>
@@ -210,7 +210,7 @@
     </div>
 
     <div class="interactive-embed">
-      <iframe src="../assets/insights/k-league-xt-week3/team_danger_zones_open_play_2025_ko.html" title="K리그 팀별 xT danger zone 인터랙티브 시각화" loading="lazy"></iframe>
+      <iframe src="../assets/insights/k-league-xt-week3/team_danger_zones_open_play_2025_ko.html" title="K리그 팀별 xT 위험 구역 인터랙티브 시각화" loading="lazy"></iframe>
       <p class="embed-fallback">시각화가 보이지 않으면 <a href="../assets/insights/k-league-xt-week3/team_danger_zones_open_play_2025_ko.html" target="_blank" rel="noopener">새 탭에서 전체 화면으로 열기</a>를 눌러 주세요.</p>
     </div>
 
@@ -223,8 +223,8 @@
     <p>먼저 2025년 K리그 선수별 총 xT와 패스·캐리 xT 순위를 살펴보겠습니다.</p>
 
     <figure class="wide">
-      <img src="../assets/insights/k-league-xt-week3/10_player_rankings.png" alt="2025 K리그 선수별 총 xT · Pass xT · Carry xT 순위 상위 5명" loading="lazy" />
-      <figcaption>표 1. 2025 K리그 선수별 총 xT · Pass xT · Carry xT 상위 5명.</figcaption>
+      <img src="../assets/insights/k-league-xt-week3/10_player_rankings_ko.png" alt="2025 K리그 선수별 총 xT · 패스 xT · 캐리 xT 순위 상위 5명" loading="lazy" />
+      <figcaption>표 1. 2025 K리그 선수별 총 xT · 패스 xT · 캐리 xT 상위 5명.</figcaption>
     </figure>
 
     <p>눈에 띄는 것은 전형적인 9번 스트라이커보다 풀백과 플레이메이커가 상위권에 많다는 점입니다. xT는 누가 슈팅을 마무리했는지가 아니라, 그 슈팅이 가능해지는 위치까지 누가 공을 전진시켰는지를 평가합니다. 그래서 빌드업과 공격 전개의 시작점에 자주 서는 풀백, 그리고 전진 패스와 운반을 반복하는 플레이메이커가 높은 xT를 기록하기 쉽습니다.</p>
@@ -232,7 +232,7 @@
     <p>다만 순위만으로는 각 선수가 어떤 방식으로 위협을 만들었는지까지는 알 수 없습니다. 이를 위해 선수별 누적 xT를 패스와 캐리로 나눠 비교했습니다. 그래프의 오른쪽으로 갈수록 패스를 통해 더 많은 위협을 만든 선수이고, 위로 갈수록 직접 공을 운반하며 더 많은 위협을 만든 선수입니다. 파란 점은 패스 xT 비중이 높은 선수, 주황 점은 캐리 xT 비중이 상대적으로 높은 선수를 뜻합니다.</p>
 
     <figure class="wide">
-      <img src="../assets/insights/k-league-xt-week3/05_player_pass_vs_carry.png" alt="2025 K리그 선수별 누적 패스 xT와 캐리 xT 비교" loading="lazy" />
+      <img src="../assets/insights/k-league-xt-week3/05_player_pass_vs_carry_ko.png" alt="2025 K리그 선수별 누적 패스 xT와 캐리 xT 비교" loading="lazy" />
       <figcaption>그림 7. 선수별 누적 패스 xT(가로)와 캐리 xT(세로). 김진수는 오른쪽 끝(패스형), 조르지, 주닝요, 아사니 등은 위쪽(캐리형)에 위치한다.</figcaption>
     </figure>
 
@@ -252,8 +252,8 @@
 
     <figure class="wide">
       <div class="figure-two-up">
-        <img src="../assets/insights/k-league-xt-week3/06_lee_taeseok_routes.png" alt="이태석 2025 K리그 상위 xT 경로" loading="lazy" />
-        <img src="../assets/insights/k-league-xt-week3/07_kim_jinsu_routes.png" alt="김진수 2025 K리그 상위 xT 경로" loading="lazy" />
+        <img src="../assets/insights/k-league-xt-week3/06_lee_taeseok_routes_ko.png" alt="이태석 2025 K리그 상위 xT 경로" loading="lazy" />
+        <img src="../assets/insights/k-league-xt-week3/07_kim_jinsu_routes_ko.png" alt="김진수 2025 K리그 상위 xT 경로" loading="lazy" />
       </div>
       <figcaption>그림 8. 이태석(왼쪽)과 김진수(오른쪽)의 상위 45개 양의 xT 행동. 두 선수 모두 왼쪽 풀백이지만 높은 xT가 만들어진 위치가 다르다.</figcaption>
     </figure>
