@@ -686,6 +686,20 @@ img { max-width: 100%; display: block; }
   color: var(--muted);
   font-size: 14px;
 }
+.article-credits {
+  margin: 34px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+.article-credits p { margin: 0; }
+.article-credits strong {
+  display: inline-block;
+  min-width: 78px;
+  color: var(--text);
+}
 .article-footer {
   margin-top: 40px;
   padding-top: 24px;
