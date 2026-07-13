@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Value Beyond Goals and Assists — Revisiting the 2025 K League Through VAEP | KAISports</title>
+<meta name="description" content="We revisit the 2025 K League through VAEP, examining how teams accumulated value, which players contributed beyond goals and assists, and where different actions created value." />
+<link rel="alternate" hreflang="ko" href="https://kaisport.github.io/posts/week4-vaep.html" />
+<link rel="alternate" hreflang="en" href="https://kaisport.github.io/posts/week4-vaep-en.html" />
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+<link rel="alternate icon" href="../assets/icons/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png" />
+<link rel="manifest" href="../site.webmanifest" />
+<meta name="theme-color" content="#0b6e4f" />
+<link rel="stylesheet" href="../css/style.css" />
+
+<style>
+.formula {
+  text-align: center;
+  font-size: 1.03rem;
+  line-height: 1.65;
+  margin: 22px 0;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+.sequence-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.sequence-grid img,
+.zone-three-up img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.zone-three-up {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  align-items: start;
+}
+.model-example-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  align-items: center;
+}
+.model-example-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.player-two-up {
+  position: relative;
+  left: 50%;
+  width: min(1100px, calc(100vw - 40px));
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  align-items: start;
+  margin: 30px 0;
+}
+.article-body .player-two-up figure {
+  margin: 0;
+}
+.player-two-up img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.source-line {
+  font-size: 0.82rem;
+  color: #6b7670;
+  margin-left: 0.35rem;
+  word-break: break-all;
+}
+.article-credits {
+  margin: 34px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+.article-credits p {
+  margin: 0;
+}
+.article-credits strong {
+  display: inline-block;
+  min-width: 138px;
+  color: var(--text);
+}
+@media (max-width: 760px) {
+  .zone-three-up,
+  .model-example-grid,
+  .player-two-up {
+    grid-template-columns: 1fr;
+  }
+  .player-two-up {
+    width: calc(100vw - 24px);
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo"><img src="../assets/icons/kaisports-mark.svg" alt="KAISports logo" /></span>
+      <span>KAISports</span>
+    </a>
+    <button type="button" class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a class="active" href="../insights-en.html">Insights</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="../presentations.html">Presentations</a></li>
+      <li><a href="../gatherings.html">Gatherings</a></li>
+      <li><a href="../members.html">Members</a></li>
+    </ul>
+  </div>
+</header>
+
+<article class="article article-report">
+
+  <header class="article-header">
+    <nav class="language-switch" aria-label="Language">
+      <a href="week4-vaep.html" lang="ko">한국어</a>
+      <a class="active" href="week4-vaep-en.html" lang="en" aria-current="page">English</a>
+    </nav>
+    <div class="meta">
+      <span class="tag">K League Analysis</span>
+      <span>July 12, 2026</span>
+      <span>· KAISports Team</span>
+    </div>
+    <h1>Value Beyond Goals and Assists — Revisiting the 2025 K League Through VAEP</h1>
+  </header>
+
+  <div class="article-body">
+
+    <p>In the previous article, we used xT (Expected Threat) to examine who moved the ball into more dangerous positions. By showing how much passes and carries increased attacking threat, xT offered a useful way to understand the process before goals and assists.</p>
+
+    <p>But not all value in football comes from moving the ball forward. A progressive pass can fail and lead to an opposition counterattack; conversely, a centre-back's interception or a safe pass through pressure can sharply reduce the risk of conceding. xT mainly captures how successful passes and carries change the threat of the ball's location, but many important actions lie outside that scope.</p>
+
+    <p><strong>VAEP (Valuing Actions by Estimating Probabilities)</strong> was developed from this problem.</p>
+
+    <p>VAEP is an action-value framework proposed by the research group of Professor Jesse Davis at KU Leuven. The researchers introduced a common scale for evaluating passes, carries and shots, as well as tackles and interceptions, through changes in scoring and conceding probabilities before and after each action.</p>
+
+    <figure class="wide">
+      <div class="model-example-grid">
+        <img src="../assets/insights/k-league-vaep-week4/01_vaep_research_example.png" alt="A VAEP example showing the value created by a pass and a cross" loading="lazy" />
+        <a href="https://www.youtube.com/watch?v=mpwqvzsxBhc" target="_blank" rel="noopener" aria-label="Watch Hudl StatsBomb's explanation of OBV">
+          <img src="../assets/insights/k-league-vaep-week4/01b_hudl_statsbomb_obv.jpg" alt="Thumbnail for Hudl StatsBomb's What is OBV video" loading="lazy" />
+        </a>
+      </div>
+      <figcaption>Figure 1. (Left) VAEP evaluates not only the final action before a goal but also how earlier actions changed the probabilities of scoring and conceding.<span class="source-line">Source: <a href="https://dtai.cs.kuleuven.be/static/sports/blog/valuing-on-the-ball-actions-in-soccer-a-critical-comparison-of-xt-and-vaep/" target="_blank" rel="noopener">KU Leuven DTAI Sports Analytics Lab</a></span><br />(Right) Hudl StatsBomb's video explaining OBV.<span class="source-line">Source: <a href="https://www.hudl.com/blog/possession-value-models-explained" target="_blank" rel="noopener">Hudl StatsBomb</a></span></figcaption>
+    </figure>
+
+    <p>Probability-based action valuation has since become an important methodology in football analytics. Alongside VAEP, similar models such as Hudl StatsBomb's OBV (On-Ball Value) are now used in player evaluation, scouting and match analysis.</p>
+
+    <p>So what does the 2025 K League look like through VAEP?</p>
+
+    <p>Lee Dong-Gyeong recorded 13 goals and 12 assists. We do not need a new metric to recognise that he was one of the league's most influential attacking players.</p>
+
+    <p>Other contributions, however, are harder to see through goals and assists alone. The K League has also begun to use VAEP to fill this gap. The 2025 K League Technical Report introduced VAEP as a key analytical metric, comparing teams' attacking and defensive contributions as well as action values created in Zones 14 and 17.</p>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-vaep-week4/02_kleague_technical_report_vaep.png" alt="Team attacking and defensive VAEP and Zone 14 and 17 analysis in the 2025 K League Technical Report" loading="lazy" />
+      <figcaption>Figure 2. Team VAEP analysis featured in the 2025 K League Technical Report.<span class="source-line">Source: Korea Professional Football League, 2025 K League Technical Report</span></figcaption>
+    </figure>
+
+    <p>This article goes one step further, moving from teams to individual players and actions. Which actions, and whose, created value that goals and assists could not fully explain? We begin with how VAEP assigns value to an action.</p>
+
+    <h2>1. What Is VAEP?</h2>
+
+    <p>Where xT evaluates changes in threat primarily through the ball's start and end locations, VAEP evaluates how much the game state changed based on the broader context of an action, including its location.</p>
+
+    <p>Even two passes toward the same location can produce different scoring and conceding probabilities depending on whether they were completed, the preceding play and the match situation. VAEP accounts for these differences and places passes, carries and shots on the same scale as turnovers, tackles, interceptions and clearances.</p>
+
+    <p>The core idea is simple: compare the probabilities of scoring and conceding before and after an action.</p>
+
+    <div class="formula">
+      <strong>VAEP(a)</strong> = [P(score | after action) − P(score | before action)]<br />
+      + [P(concede | before action) − P(concede | after action)]
+    </div>
+
+    <p>If a team's scoring probability rises after an action, the action creates offensive value. If its probability of conceding falls, it creates defensive value. The sum of the two is that action's VAEP.</p>
+
+    <p>For example, when a defensive midfielder plays forward through pressure and raises the probability of scoring on the next attack, the pass earns positive VAEP even without an assist. The same applies when a centre-back stops a dangerous progression and lowers the risk of conceding. Conversely, losing the ball in one's own half and increasing the opponent's chance of scoring receives a negative value.</p>
+
+    <figure class="wide">
+      <div class="sequence-grid">
+        <img src="../assets/insights/k-league-vaep-week4/02_vaep_sequence_demo.gif" alt="How action-level VAEP accumulates during a scoring sequence in Gwangju versus Seoul" loading="lazy" />
+        <img src="../assets/insights/k-league-vaep-week4/03_vaep_sequence_cross_goal.gif" alt="How action-level VAEP accumulates during an attacking sequence in Ulsan versus Jeju" loading="lazy" />
+      </div>
+      <figcaption>Figure 3. Action-level and cumulative VAEP changing through real attacking sequences.</figcaption>
+    </figure>
+
+    <p>Reading VAEP action by action and in sequence reveals whether the final shot created most of the value, or whether a recovery, pass or carry built that value step by step beforehand.</p>
+
+    <p>So while xT primarily asks, “How much more threatening a location did the ball move into?”, VAEP goes one step further: “In that context, how much did this action improve the team's chances of scoring and avoiding conceding?”</p>
+
+    <h2>2. Different Ways Teams Accumulated Value</h2>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-vaep-week4/04_team_volume_density_en.png" alt="2025 K League 1 teams compared by total season VAEP and VAEP per 100 actions" loading="lazy" />
+      <figcaption>Figure 4. The x-axis shows total season VAEP; the y-axis shows VAEP per 100 actions.</figcaption>
+    </figure>
+
+    <p>The chart's x-axis represents the total VAEP accumulated across the season—the volume of value created. The y-axis shows VAEP per 100 on-ball actions, a measure of value density that accounts for action volume. Teams further right accumulated more value over the full season, while teams higher up changed scoring and conceding probabilities more with the same number of actions.</p>
+
+    <p>On this basis, Gimcheon Sangmu recorded the highest cumulative VAEP in the 2025 K League 1. Gimcheon finished at 95.76, narrowly ahead of Jeonbuk Hyundai Motors at 95.58.</p>
+
+    <p>Although Gimcheon and Jeonbuk were nearly identical in total VAEP, Jeonbuk led 0.35 to 0.33 in VAEP per 100 actions. Gimcheon accumulated value through a greater number of actions, whereas Jeonbuk produced a similar total through relatively fewer actions. Daejeon and FC Anyang also ranked highly in value per action, while FC Seoul and Ulsan tended to accumulate value through longer sequences. Because VAEP per action is influenced by playing style, including possession patterns and shot frequency, it is better interpreted as a difference in how teams accumulated value than as an absolute efficiency ranking.</p>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-vaep-week4/05_team_offensive_defensive_en.png" alt="2025 K League 1 team offensive and defensive VAEP decomposition and defensive VAEP ranking" loading="lazy" />
+      <figcaption>Figure 5. Offensive and defensive VAEP by team. Teams with similar total VAEP can have different compositions of attacking and defensive value.</figcaption>
+    </figure>
+
+    <p>Volume and value density alone do not tell us whether that value came from attack or defence. VAEP can decompose each action's value into offensive value, which raises the probability of scoring, and defensive value, which lowers the probability of conceding. Because the model estimates near-future scoring and conceding probabilities from the perspective of the team in possession, goals and shots tend to create direct and relatively large offensive values. Defensive value is more distributed across actions, while off-ball defending is not included, so a smaller value does not mean that defence is less important.</p>
+
+    <p>Breaking the totals down makes the difference between Gimcheon and Jeonbuk clearer. Jeonbuk's offensive VAEP of 91.74 exceeded Gimcheon's 90.99, but Gimcheon led 4.76 to 3.84 in defensive VAEP. Jeonbuk created slightly more value through actions that increased scoring probability; Gimcheon added more value by reducing the risk of conceding and narrowly finished first overall.</p>
+
+    <p>FC Anyang's defensive VAEP of 6.46 was the highest in the league. Their total attacking value remained some distance from the top teams, but their recorded actions accumulated the most value in the direction of lowering the risk of conceding.</p>
+
+    <p>Daegu, by contrast, recorded 75.47 in offensive VAEP but only 0.05 in defensive VAEP. Our previous xT analysis showed that Daegu moved the ball into dangerous areas without turning that progression into enough high-quality chances. VAEP adds another layer: after danger passed to the opponent, Daegu also failed to create sufficient net value in reducing it again.</p>
+
+    <p>Teams with similar total VAEP therefore did not necessarily create their value in the same way. Gimcheon and Jeonbuk were almost level in volume but differed in composition; Anyang stood out for defensive value, and Jeonbuk for value per action. VAEP shows not only a ranking, but how each team shifted the game state in its favour.</p>
+
+    <h2>3. The Players Goals and Assists Could Not Fully Explain</h2>
+
+    <p>A team's VAEP ultimately comes from the actions performed by its players. So how similar were player evaluations based on goals and assists to those based on VAEP?</p>
+
+    <p>The chart below shows the relationship between goal contributions and total VAEP for outfield players who recorded at least 500 actions. Further right means more goals and assists; higher up means more VAEP accumulated over the season.</p>
+
+    <div class="player-two-up">
+      <figure>
+        <img src="../assets/insights/k-league-vaep-week4/06_player_vaep_vs_goal_contributions_en.png" alt="Relationship between goal contributions and total VAEP among 2025 K League 1 outfield players" loading="lazy" />
+        <figcaption>Figure 6. Goal contributions and total VAEP. Teal marks players with high VAEP relative to their goals and assists.</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/insights/k-league-vaep-week4/07_player_vaep_per90_en.png" alt="Top 15 outfield players by VAEP per 90 minutes in the 2025 K League 1" loading="lazy" />
+        <figcaption>Figure 7. Top 15 outfield players by VAEP per 90 among players with at least 900 minutes.</figcaption>
+      </figure>
+    </div>
+
+    <p>Lee Dong-Gyeong occupied the highest position on both measures, with 25 goal contributions and a total VAEP of 17.89.</p>
+
+    <p>Not every player, however, sat close to the trend line. Players above it accumulated more VAEP than others with a similar number of goals and assists.</p>
+
+    <p>Luan stands out most clearly. Despite recording only five goals and no assists, he posted a total VAEP of 15.22, among the highest in the league. Lingard and Kim Jin-Gyu also produced high VAEP relative to their goal contributions, while Hwang Jae-Won, Bojanic and Lee Chang-Min sat above the trend line as well. Their actions often shifted the game state in their team's favour even when they were not recorded as goals or final passes.</p>
+
+    <p>After adjusting for playing time, Cesinha ranked first in VAEP per 90, followed by Bojanic at 0.63. Lee Dong-Gyeong, first in total VAEP, ranked third, while Luan remained near the top at 0.51. Their high totals were therefore not simply a product of playing more minutes.</p>
+
+    <figure class="wide">
+      <img src="../assets/insights/k-league-vaep-week4/08_player_action_rankings_en.png" alt="Top five players in VAEP from passes, carries and dribbles, shots, and defensive actions" loading="lazy" />
+      <figcaption>Table 1. Top five players in cumulative VAEP by action type among outfield players with at least 500 actions.</figcaption>
+    </figure>
+
+    <p>Splitting the results by action type makes the differences in how players created value clearer. Lee Dong-Gyeong led pass VAEP at 11.69, narrowly ahead of Kim Jin-Su at 11.64. Luan ranked fifth at 9.35, showing that his high total VAEP came not only from shooting but also from his contribution to build-up.</p>
+
+    <p>Anderson led in carry and dribble VAEP, while Sabak ranked first for shooting. Lee Chang-Yong, meanwhile, topped defensive-action VAEP at 1.58. His contribution through tackles, interceptions and similar actions was difficult to see from his two goals and no assists alone.</p>
+
+    <p>These values are cumulative season totals, not per-action averages. Numbers from actions with very different frequencies, such as passes and shots, should therefore not be compared directly. The useful comparison is within each action type: Lee Dong-Gyeong through passing, Anderson through ball carrying, Sabak through shooting and Lee Chang-Yong through defensive actions created value in different ways.</p>
+
+    <h2>4. Similar Action Value, Different Spaces</h2>
+
+    <figure class="wide">
+      <div class="zone-three-up">
+        <img src="../assets/insights/k-league-vaep-week4/09_lee_dong_gyeong_zone_vaep_en.png" alt="Lee Dong-Gyeong's cumulative VAEP across 18 pitch zones" loading="lazy" />
+        <img src="../assets/insights/k-league-vaep-week4/10_kim_jin_gyu_zone_vaep_en.png" alt="Kim Jin-Gyu's cumulative VAEP across 18 pitch zones" loading="lazy" />
+        <img src="../assets/insights/k-league-vaep-week4/11_kim_jin_su_zone_vaep_en.png" alt="Kim Jin-Su's cumulative VAEP across 18 pitch zones" loading="lazy" />
+      </div>
+      <figcaption>Figure 8. Cumulative VAEP by zone for Lee Dong-Gyeong, Kim Jin-Gyu and Kim Jin-Su. Lower values are shown in light green and higher values in red.</figcaption>
+    </figure>
+
+    <p>Lee Dong-Gyeong's value was concentrated close to the opponent's goal. He recorded 4.03, 3.31 and 3.26 VAEP in Zones 16, 17 and 18—the two sides and centre of the opposition penalty area. Those three zones alone accounted for 10.60, more than half of his season total. Rather than remaining on one flank, Lee directly increased scoring probability across the opposition penalty area.</p>
+
+    <p>Kim Jin-Gyu recorded his highest value, 2.92, in Zone 14—the central area immediately outside the opposition penalty box. He also created 2.22 and 2.47 in Zones 16 and 18, the two sides of the penalty area. Unlike Lee Dong-Gyeong, however, his highest value appeared centrally outside the box rather than inside it, reflecting a role in choosing the final pass and directing the next phase of attack rather than finishing moves himself.</p>
+
+    <p>Kim Jin-Su showed a clear line of value along one flank. His VAEP rose progressively across Zones 7, 10, 13 and 16 on the left side, peaking at 3.95 in Zone 16, deep in the opposition half. Creating far more value on the flank than in central Zone 14 reflects the full-back's role in linking attacks through progressive passes and crosses rather than entering the box directly.</p>
+
+    <p>All three players recorded high pass VAEP, but they created it in different spaces. Lee Dong-Gyeong did so across areas close to the opponent's goal, Kim Jin-Gyu from the centre outside the box, and Kim Jin-Su by progressing along the flank.</p>
+
+    <p>Because these are cumulative values by zone, they are also affected by how many actions a player recorded in each area. A darker zone should not automatically be read as the space where each individual action was most efficient. Instead, the maps are spatial profiles showing where a player repeatedly accumulated value over the season.</p>
+
+    <h2>Conclusion: Good Players Are Not Found Only in the Final Action</h2>
+
+    <p>Gimcheon accumulated the most VAEP in the 2025 K League 1, while Lee Dong-Gyeong recorded the highest player total. His result aligned with the 13 goals and 12 assists visible in conventional attacking statistics.</p>
+
+    <p>VAEP's value, however, is not limited to confirming a familiar number one. It also brings forward players who are difficult to explain through traditional records alone: Luan, whose value remained high despite five goals and no assists; Bojanic, who stood out in VAEP per 90; and Lee Chang-Yong, who led the league in value from defensive actions.</p>
+
+    <p>VAEP does not explain everything. It cannot evaluate unrecorded pressing, positioning or off-ball movement that creates space, and cumulative values are influenced by minutes played and action volume. VAEP should therefore be used not as a final score that reduces a player to one number, but as a tool for finding contributions that disappear between goals and assists.</p>
+
+    <p>For questions about the analysis or collaboration, write to <a href="mailto:thedatadribblers@gmail.com">thedatadribblers@gmail.com</a>.</p>
+
+    <div class="article-credits" aria-label="Contributors and roles">
+      <p><strong>Code implementation</strong> Miru Hong</p>
+      <p><strong>Writing</strong> Minho Lee, Soonjae Kwon</p>
+      <p><strong>Review</strong> Minho Lee</p>
+    </div>
+
+  </div>
+
+  <footer class="article-footer">
+    <a href="../insights-en.html">← Back to Insights</a>
+    <span>Contact &middot; <a href="mailto:thedatadribblers@gmail.com">thedatadribblers@gmail.com</a></span>
+  </footer>
+
+</article>
+
+<footer class="footer">
+  <p>Contact: <a class="email" href="mailto:thedatadribblers@gmail.com">thedatadribblers [at] gmail.com</a></p>
+  <p>&copy; <span id="year"></span> KAISports | Korea AI Research Society for Sports</p>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
